@@ -1,0 +1,24 @@
+{
+  "name": "card-brawl",
+  "version": "1.0.0",
+  "description": "Card Brawl is a dungeon inspired card game featuring the protagonist (you), fighting against a multitude of monsters as you traverse the levels. You as the player will have access to a deck (10 cards), your current hand (5 cards), hitpoints, and mana. You will have to use your dealt hand to either attack (deal damage to monsters) or defend (shield your life from attacks). The rules are simple:",
+  "main": "index.js",
+  "browserslist": [
+    "defaults"
+  ],
+  "scripts": {
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },  
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JonBerzon/CardBrawl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonBerzon/CardBrawl/issues"
+  },
+  "homepage": "https://github.com/JonBerzon/CardBrawl#readme"
+}
