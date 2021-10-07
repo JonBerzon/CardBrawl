@@ -1,4 +1,69 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+canvas {
+  background-image: url(../dist/img/board.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
 
+.canvas-div {
+  display: flex;
+  justify-content: center;
+}
+
+.center-this {
+  display: flex;
+  justify-content: center;
+}
+
+* {
+  background-color: #4d4246;
+}
+
+.nav-ul {
+  display: flex;
+  text-decoration: none;
+  justify-content: space-between;
+}
+
+.nav-ul > p {
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 50px;
+  color: #baa92b;
+  background-color: inherit;
+  letter-spacing: 0.1em;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #2e2e2e, 0 2px 0 #2c2c2c, 0 3px 0 #2a2a2a, 0 4px 0 #282828, 0 5px 0 #262626, 0 6px 0 #242424, 0 7px 0 #222, 0 8px 0 #202020, 0 9px 0 #1e1e1e, 0 10px 0 #1c1c1c, 0 11px 0 #1a1a1a, 0 12px 0 #181818, 0 13px 0 #161616, 0 14px 0 #141414, 0 15px 0 #121212, 0 22px 30px rgba(0, 0, 0, 0.9);
+}
+
+a {
+  text-decoration: none;
+  color: #747447;
+  padding-right: 80px;
+  padding-left: 90px;
+}
+
+.main {
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  /* flex-grow: 1; */
+  border: 5px solid #2b2628;
+  width: 225px;
+  height: 688px;
+}
+
+.right {
+  /* flex-grow: 1; */
+  border: 5px solid #2b2628;
+  width: 225px;
+  height: 688px;
+}
