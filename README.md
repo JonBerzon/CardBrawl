@@ -1,0 +1,29 @@
+# Background: 
+Card Brawl is a dungeon inspired card game featuring the protagonist (you), fighting against a multitude of monsters as you traverse the levels. You as the player will have access to a deck (10 cards), your current hand (5 cards), hitpoints, and mana. You will have to use your dealt hand to either attack (deal damage to monsters) or defend (shield your life from attacks). The rules are simple:
+
+1) Use any combination of cards in your hand to defeat the enemy.
+2) You may only use up to what your mana will allow. Each card will have a mana cost so think wisely before rushing into battle.
+
+
+# Functionality & MVPs: 
+In Card Brawl, users will be able to:
+1) Start the game by hitting the play button.
+2) Reset the game by hitting the reset button.
+3) Attack the enemies by playing an attack card.
+4) Defend against enemies by playing a shield card.
+
+In additon, this project will include: 
+1) A fully guided tutorial by hitting the tutorial button.
+2) a production README
+
+# Wireframe #
+![Wireframe](CB_wireframe.png)
+
+# Technologies and APIs 
+1) JavaScript
+2) HTML5
+   - Canvas
+
+3) CSS
+
+
