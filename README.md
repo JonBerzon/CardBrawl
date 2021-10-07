@@ -20,10 +20,27 @@ In additon, this project will include:
 ![Wireframe](CB_wireframe.png)
 
 # Technologies and APIs 
-1) JavaScript
-2) HTML5
-   - Canvas
+1) Vanilla Javascript to handle the game logic and manipulate the frontend.
+2) HTML5 to create a static page.
+   - The Canvas API to render the game board.
+3) CSS for specific styling.
+4) Weback to bundle and transpile the source JavaScript code.
 
-3) CSS
+# Implementation Timeline
+
+Friday Afternoon & Weekend:
+- Create the overall structure. Set up the canvas and layout and start researching the logic required to interact with the canvas i.e. clicking cards.
+
+Monday:
+- Handle the class structure. Fully flesh out the game, card, deck classes.
+
+Tuesday:
+- Handle the monster and attacking logic. Flesh out the player and monster classes.
+
+Wednesday:
+- Integrate the canvas with the game logic. Clicks should enable class responses and update the board.
+
+Thursday Morning:
+- Tweaks and fixes.
 
 
