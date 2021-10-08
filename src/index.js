@@ -41,8 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
             } 
             ctx.clearRect(327, 114, 400, 200);
-            let test = new Image();
-        placeImages(test, 400, 60, .4, 0, 1, `./src/img/skel_attack/Sattack${i}.png` )
+            let skeleton = new Image();
+            placeImages(skeleton, 400, 60, .4, 0, 1, `./src/img/skel_attack/Sattack${i}.png` )
             i += 1;
             
         }, 50);
@@ -50,11 +50,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     attackAnimation()
 
-    $.ajax(
-        method = "post",
-        url = "kill myself",
-        data_type = "boobs"
-    )
+   
 
     
 
