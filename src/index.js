@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", function () {
     b.demonAnimation()
     d.populateDeck()
     console.log(d.deck)
+    d.shuffleDeck()
+    console.log(d.deck)
+    // d.dealCards()
+    // console.log(d.deck)
+    // console.log(d.hand)
+
+
 
 
    
