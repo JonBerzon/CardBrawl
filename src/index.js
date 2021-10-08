@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let cardSlots = [];
 
     canvas.addEventListener('click', function(event){
-        let x = event.pageX - 660 // off by 660 pixels
-        let y = event.pageY - 173 // off by 173 pixels
+        let x = event.pageX - canvas.offsetLeft // off by 660 pixels
+        let y = event.pageY - canvas.offsetTop  // off by 173 pixels
         console.log(x,y)
 
     })
@@ -24,31 +24,42 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
     const placeHolder = new Image();
-    placeImages(placeHolder, 290, 350, 4.5, 170, 5, './src/img/alien.png');
+    placeImages(placeHolder, 290, 440, .6, 180, 5, './src/img/testCard.png');
 
     const cardBack = new Image();
-    placeImages(cardBack, 45, 350, 4.5, 20, 3, './src/img/back.png');
+    placeImages(cardBack, 45, 440, .6, 20, 3, './src/img/testCardBack.png');
     
-    const button = new Image();
-    placeImages(button, 300, 595, 2, 515, 2, './src/img/button.png');
+    // const button = new Image();
+    // placeImages(button, 300, 595, 2, 515, 2, './src/img/button.png');
     let i = 1
 
-    function attackAnimation() {
-        let intervalId = setInterval(()=>{
-            if (i === 9){
-                i = 1;
-                clearInterval(intervalId)
+    // function attackAnimation() {
+    //     let intervalId = setInterval(()=>{
+    //         if (i === 9){
+    //             i = 1;
+    //             clearInterval(intervalId)
 
-            } 
-            ctx.clearRect(327, 114, 400, 200);
-            let skeleton = new Image();
-            placeImages(skeleton, 400, 60, .4, 0, 1, `./src/img/skel_attack/Sattack${i}.png` )
-            i += 1;
+    //         } 
+    //         ctx.clearRect(327, 114, 400, 200);
+    //         let skeleton = new Image();
+    //         placeImages(skeleton, 400, 60, .4, 0, 1, `./src/img/skel_attack/Sattack${i}.png` )
+    //         i += 1;
             
-        }, 50);
-    }
+    //     }, 50);
+    // }
 
-    attackAnimation()
+    // attackAnimation()
+    let j = 1;
+    setInterval(() => {
+        if (j === 7) {
+            j = 1;
+        }
+        ctx.clearRect(427, 14, 600, 400);
+        let demon = new Image();
+        placeImages(demon, 600, 60, .4, 0, 1, `./src/img/demon_idle/${j}.png`)
+        j += 1;
+
+    }, 70);
 
    
 
