@@ -17,7 +17,7 @@ In additon, this project will include:
 2) a production README
 
 # Wireframe #
-![Wireframe](dist/img/CB_wireframe.png)
+![Wireframe](src/img/CB_wireframe.png)
 
 # Technologies and APIs 
 1) Vanilla Javascript to handle the game logic and manipulate the frontend.
