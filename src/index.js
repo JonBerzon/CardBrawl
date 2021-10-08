@@ -1,6 +1,7 @@
 import { Board } from "./scripts/board";
 import { DeckHand } from "./scripts/deckHand"
 import { Card } from "./scripts/card"
+import { Game } from "./scripts/game";
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("game-canvas");
@@ -9,8 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     canvas.width = 1237; 
     canvas.height = 750; 
 
-    let b = new Board(canvas, ctx)
-    let d = new DeckHand()
+    // let b = new Board(canvas, ctx)
+    // let d = new DeckHand()
+    let g = new Game(canvas,ctx)
+    g.basicStartup();
 
     let cardSlots = [];
     let left = 290;
@@ -30,8 +33,11 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(x,y)
         cardSlots.forEach(function (ele, index){
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
-                d.hand[index].select();
-                console.log(d.hand[index])
+                console.log(g.deckHand.hand[index])
+                g.deckHand.hand[index].select();
+                g.deckHand.hilightCard()
+                // console.log(d.hand[index])
+                // console.log("hand", d.hand)
             }
         });
         
@@ -40,11 +46,11 @@ document.addEventListener("DOMContentLoaded", function () {
     // while (true){
         
     // }
-    ctx.beginPath();
-    ctx.rect(289, 440, 169, 213);
-    ctx.strokeStyle = "yellow";
-    ctx.lineWidth = "4";
-    ctx.stroke();
+    // ctx.beginPath();
+    // ctx.rect(289, 440, 169, 213);
+    // ctx.strokeStyle = "yellow";
+    // ctx.lineWidth = "4";
+    // ctx.stroke();
     // ctx.clearRect(284, 434, 177, 222);
     
 
@@ -52,21 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
    
     
-    b.demonAnimation();
-    b.renderCards();
+    // b.demonAnimation();
+    // b.renderCards();
     // console.log("deck", d.deck);
-    d.dealCards()
-    d.dealCards()
-    d.dealCards()
-    d.dealCards()
-    d.dealCards()
-    d.dealCards()
-    d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
+    // d.dealCards()
 
     // d.dealCards()
-    console.log("deck", d.deck);
-    console.log("hand", d.hand);
-    console.log("discard", d.discard);
+    // console.log("deck", d.deck);
+    // console.log("hand", d.hand);
+    // console.log("discard", d.discard);
 
 
     // d.shuffleDeck();
