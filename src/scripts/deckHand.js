@@ -4,6 +4,8 @@ export class DeckHand{
         this.deck = [];
         this.hand = [];
         this.discard = [];
+        this.populateDeck();
+        this.shuffleDeck();
     }
 
     populateDeck(){
@@ -20,11 +22,13 @@ export class DeckHand{
     }
 
     dealCards(){
+        this.clearHandPosition();
         this.discardCards();
         if (!this.deck.length) this.shuffleDeck();
         for (let i = 0; i < 5; i++) {
             this.hand.push(this.deck.shift()); 
         }
+        this.setHandPosition();
     }
 
     shuffleDeck(){
@@ -33,13 +37,11 @@ export class DeckHand{
                 this.deck.push(this.discard.shift());
             }
         }
-        for (let i = 0; i < 10; i++) {
-            // debugger
-            let j = Math.floor(Math.random() * 9)
-            let k = Math.floor(Math.random() * 9)
+        for (let i = 0; i < 20; i++) {
+            let j = Math.floor(Math.random() * 9);
+            let k = Math.floor(Math.random() * 9);
 
-            // debugger
-            [this.deck[j], this.deck[k]] = [this.deck[k], this.deck[j]]
+            [this.deck[j], this.deck[k]] = [this.deck[k], this.deck[j]];
         }
     }
 
@@ -48,5 +50,18 @@ export class DeckHand{
             this.discard.push(this.hand.shift());
         }
 
+    }
+
+    setHandPosition(){
+        for (let i = 0; i < this.hand.length; i++) {
+            this.hand[i].pos = i; 
+        }
+    }
+
+    clearHandPosition(){
+        for (let i = 0; i < this.hand.length; i++) {
+            this.hand[i].pos = NaN;
+            
+        }
     }
 }

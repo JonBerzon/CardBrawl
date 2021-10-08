@@ -10,5 +10,6 @@ export class Card{
 
     select(){
         this.isSelected === false ? this.isSelected = true : this.isSelected = false;
+        
     }
 }

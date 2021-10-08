@@ -29,7 +29,7 @@ export class Board{
         }, 70);
     }
 
-    dealCards(){
+    renderCards(){
         const cardBack = new Image();
         this.placeImages(cardBack, 45, 440, .6, 20, 3, './src/img/testCardBack.png');
 
