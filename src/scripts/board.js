@@ -4,18 +4,20 @@ export class Board{
         this.ctx = ctx;
         this.game = game;
         this.imgSet = {}
+        this.j = 1;
     }
 
-    placeImages(img, x, y, num, dist, times, src) {
+    placeImages(x, y, dist, src) {
         let that = this;
-        for (let i = 0; i < times; i++) { 
+        for (let i = 0; i < src.length; i++) { 
             that.imgSet[src + i] = new Image();
             let img = that.imgSet[src + i];
             
             img.addEventListener('load', function () {
-                that.ctx.drawImage(img, x + (dist * i), y, img.width / num, img.height / num);
+                that.ctx.drawImage(img, x + (dist * i), y);
             });
             img.src = src[i];
+            
             
         }
     }
@@ -27,8 +29,7 @@ export class Board{
                 j = 1;
             }
             this.ctx.clearRect(600, 60, 400, 350);
-            let demon = new Image();
-            this.placeImages(demon, 600, 60, .4, 0, 1, [`./src/img/demon_idle/${j}.png`])
+            this.placeImages(600, 60, 0, [`./src/img/demon_idle/${j}.png`])
             j += 1;
 
         }, 70);
@@ -39,17 +40,16 @@ export class Board{
         this.game.deckHand.hand.forEach(card=>{
             arr.push(card.src)
         });
-        let cardBack = new Image();
-        this.placeImages(cardBack, 45, 440, .6, 20, 3, ['./src/img/testCardBack.png', './src/img/testCardBack.png', './src/img/testCardBack.png']);
+        this.placeImages(45, 440, 20, ['./src/img/cards/cback.png']);
 
-        let placeHolder = new Image();
-        this.placeImages(placeHolder, 290, 440, .6, 180, 5, arr);
+        // this.placeImages(290, 440, .6, 180, arr);
+        this.placeImages(290, 440, 180, arr);
+
     }
 
     highlight(index){
-        const highlight = new Image();
         let x = 290 + (index * 180);
-        this.placeImages(highlight, x,440, .6, 0, 1, ['./src/img/yellow.png'])
+        this.placeImages(x, 440, 0, ['./src/img/cards/highlight.png'])
     }
 
     clearHighlight(){

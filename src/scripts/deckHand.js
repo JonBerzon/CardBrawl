@@ -12,16 +12,17 @@ export class DeckHand{
 
     populateDeck(){
         for (let i = 0; i < 4; i++) {
-            this.deck.push(new Card("weakAttack", 1, 0, 1, this, "src/img/testCard.png"));
+            // this.deck.push(new Card("weakAttack", 1, 0, 1, this, "src/img/testCard.png"));
+            this.deck.push(new Card("weakAttack", 1, 0, 1, this, "src/img/cards/weaka.png"));
         }
 
 
         for (let i = 0; i < 4; i++) {
-            this.deck.push(new Card("weakDef", 0, 1, 1, this, "src/img/testCard2.png"));
+            this.deck.push(new Card("weakDef", 0, 1, 1, this, "src/img/cards/weakd.png"));
         }
 
-        this.deck.push(new Card("strongAttack", 3, 0, 2, this, "src/img/testCard1.png"));
-        this.deck.push(new Card("stronDef", 0, 3, 2, this, "src/img/testCard3.png"));
+        this.deck.push(new Card("strongAttack", 3, 0, 2, this, "src/img/cards/stronga.png"));
+        this.deck.push(new Card("stronDef", 0, 3, 2, this, "src/img/cards/strongd.png"));
 
 
     }
