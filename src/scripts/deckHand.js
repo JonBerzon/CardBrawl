@@ -12,7 +12,6 @@ export class DeckHand{
 
     populateDeck(){
         for (let i = 0; i < 4; i++) {
-            // this.deck.push(new Card("weakAttack", 1, 0, 1, this, "src/img/testCard.png"));
             this.deck.push(new Card("weakAttack", 1, 0, 1, this, "src/img/cards/weaka.png"));
         }
 
@@ -82,11 +81,24 @@ export class DeckHand{
         this.board.clearHighlight();
         let that = this;
         this.hand.forEach((card, index) =>{
-            // debugger
             if (card.isSelected){
                 that.board.highlight(index);
             }
 
         })
+    }
+
+    sendSelected(){
+        let mana = 0;
+        let damage = 0;
+        let shield = 0;
+        this.hand.forEach(card =>{
+            if (card.isSelected){
+                damage += card.atk;
+                shield += card.def;
+                mana += card.mana;
+            }
+        })
+        this.game.player.calculations(mana, damage, shield);
     }
 }
