@@ -12,11 +12,19 @@ export class Card{
     }
 
     select(){
-        this.deckHand.deselect();
+        
 
-        this.isSelected === false ? this.isSelected = true : this.isSelected = false;
+        if (this.isSelected === false){
+            this.deckHand.deselect();
+            this.isSelected = true;
+            
+            this.deckHand.highlightCard();
+        } else {
+            this.isSelected = false;
+            this.deckHand.deselect();
 
-    }
+        } 
+    }  
 
     
 }

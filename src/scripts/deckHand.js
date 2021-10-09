@@ -74,9 +74,10 @@ export class DeckHand{
         this.hand.forEach(card =>{
             card.isSelected = false;
         });
+        this.board.clearHighlight();
     }
 
-    hilightCard(){
+    highlightCard(){
         this.board.clearHighlight();
         let that = this;
         this.hand.forEach((card, index) =>{
