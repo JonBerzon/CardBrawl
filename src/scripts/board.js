@@ -3,14 +3,17 @@ export class Board{
         this.canvas = canvas;
         this.ctx = ctx;
         this.game = game;
+        this.imgSet = {}
     }
 
     placeImages(img, x, y, num, dist, times, src) {
         let that = this;
-        for (let i = 0; i < times; i++) {
+        for (let i = 0; i < times; i++) { 
+            that.imgSet[src + i] = new Image();
+            let img = that.imgSet[src + i];
+            
             img.addEventListener('load', function () {
-                that.ctx.drawImage(img, x, y, img.width / num, img.height / num);
-                x += dist
+                that.ctx.drawImage(img, x + (dist * i), y, img.width / num, img.height / num);
             });
             img.src = src[i];
             
@@ -36,11 +39,10 @@ export class Board{
         this.game.deckHand.hand.forEach(card=>{
             arr.push(card.src)
         });
-        // debugger
-        const cardBack = new Image();
+        let cardBack = new Image();
         this.placeImages(cardBack, 45, 440, .6, 20, 3, ['./src/img/testCardBack.png', './src/img/testCardBack.png', './src/img/testCardBack.png']);
 
-        const placeHolder = new Image();
+        let placeHolder = new Image();
         this.placeImages(placeHolder, 290, 440, .6, 180, 5, arr);
     }
 

@@ -17,4 +17,6 @@ export class Card{
         this.isSelected === false ? this.isSelected = true : this.isSelected = false;
 
     }
+
+    
 }

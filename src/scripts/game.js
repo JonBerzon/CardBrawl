@@ -13,5 +13,7 @@ export class Game{
         this.board.demonAnimation();
         this.deckHand.dealCards();
         this.board.renderCards();
+
+        console.log(this.deckHand.hand)
     }
 }

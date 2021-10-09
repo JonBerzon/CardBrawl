@@ -17,11 +17,11 @@ export class DeckHand{
 
 
         for (let i = 0; i < 4; i++) {
-            this.deck.push(new Card("weakDef", 0, 1, 1, this, "src/img/testCard3.png"));
+            this.deck.push(new Card("weakDef", 0, 1, 1, this, "src/img/testCard2.png"));
         }
 
         this.deck.push(new Card("strongAttack", 3, 0, 2, this, "src/img/testCard1.png"));
-        this.deck.push(new Card("stronDef", 0, 3, 2, this, "src/img/testCard4.png"));
+        this.deck.push(new Card("stronDef", 0, 3, 2, this, "src/img/testCard3.png"));
 
 
     }

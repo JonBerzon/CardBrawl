@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
                 console.log(g.deckHand.hand[index])
                 g.deckHand.hand[index].select();
-                g.deckHand.hilightCard()
+                g.deckHand.hilightCard();
                 // console.log(d.hand[index])
                 // console.log("hand", d.hand)
             }
