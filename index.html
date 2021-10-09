@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css" />
     <link rel="stylesheet" href="./dist/main.css" />
     <script src="./dist/main.js"></script>
     <title>Card Brawl</title>
@@ -12,15 +13,51 @@
     <header>
         <nav>
             <ul class="nav-ul">
-                <p class="title"><a href="#">Reset</a></p>
+                <!-- <p class="title"><a href="#">Reset</a></p> -->
                 <h1 class="title">Card Brawl</h1>
-                <p class="title"><a href="#">My Links</a></p>
+                <!-- <p class="title"><a href="#">My Links</a></p> -->
             </ul>
         </nav>
     </header>
     <div class="main">
         <div class="left">
-    
+            <img src="./src/img/non_canvas/Player sprite.png" id="player-sprite" alt="">
+            <hr>
+            <p id="health-mana"> Health</p>
+            <div class="icons">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-1">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-2">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-3">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-4">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-5">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-6">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-7">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-8">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-9">
+                <img src="./src/img/non_canvas/heart.png" id="player-heart-10">
+            </div>
+            
+            <hr>
+            <p id="health-mana"> Mana</p>
+            <div class="icons">
+                <img src="./src/img/non_canvas/mana.png" alt="">
+                <img src="./src/img/non_canvas/mana.png" alt="">
+                <img src="./src/img/non_canvas/mana.png" alt="">
+            </div>
+            <hr>
+            <p id="health-mana"> Shield</p>
+            <div class="icons" id="shieldTest">
+                <img src="./src/img/non_canvas/shield.png" id="shield-1" style="filter: grayscale(1)">
+                <img src="./src/img/non_canvas/shield.png" id="shield-2" style="filter: grayscale(1)">
+                <img src="./src/img/non_canvas/shield.png" id="shield-3" style="filter: grayscale(1)">
+                <img src="./src/img/non_canvas/shield.png" id="shield-4" style="filter: grayscale(1)">
+
+            </div>
+            <hr>
+            <div class="left-buttons">
+                <button class="myButton" id="reset-button">Reset</button>
+                <button class="myButton" id="tutorial-button">Tutorial</button>
+            </div>  
         </div>
     
         <div class="mid">
@@ -30,7 +67,41 @@
         </div>
     
         <div class="right">
-    
+            
+
+            <img src="./src/img/non_canvas/boss-sprite.png" id="player-sprite" alt="">
+            <hr>
+            <p id="health-mana"> Health</p>
+            <div class="icons">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+                <img src="./src/img/non_canvas/heart.png" alt="">
+            </div>
+            <hr>
+            <div class="right-buttons">
+                <button class="myButton" id="play-cards">Play Cards</button>
+                <button class="myButton" id="end-turn">End Turn</button>
+
+                <!-- <a href="#" class="myButton" id="play-cards">Play Cards</a> -->
+            </div>
+            
         </div>
     </div>
 

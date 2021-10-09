@@ -6,6 +6,7 @@ import { Game } from "./scripts/game";
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext('2d')
+    canvas.onselectstart = function () { return false; }
 
     canvas.width = 1237; 
     canvas.height = 750; 
@@ -35,5 +36,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
         
-    });   
+    });
+
+    const playCards = document.getElementById("play-cards");
+    playCards.addEventListener('click', ()=>{
+        // alert("clicked")
+        g.deckHand.sendSelected();
+        // document.getElementsByClassName("showHp")[0].innerHTML = `${g.player.hp}`;
+    })
+
+    const resetButton = document.getElementById("reset-button")
+    resetButton.addEventListener('click', ()=>{
+        g.player.fullReset();
+    })
+
+    // const leftDiv = document.querySelector(".left")
+    // console.log(leftDiv)
+    // const ele = document.createElement("P");
+    // ele.classList.add("showHp")
+    // const text = document.createTextNode(`${g.player.hp}`);
+    // ele.appendChild(text);
+    // leftDiv.appendChild(ele);
+
 });

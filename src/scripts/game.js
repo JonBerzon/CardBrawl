@@ -1,5 +1,6 @@
 import { DeckHand } from "./deckHand"
 import { Board } from "./board"
+import { Player } from "./player";
 
 export class Game{
     constructor(canvas, ctx){
@@ -7,6 +8,7 @@ export class Game{
         this.ctx = ctx;
         this.board = new Board(this.canvas, this.ctx, this);
         this.deckHand = new DeckHand(this, this.board);
+        this.player = new Player();
     }
 
     basicStartup(){
@@ -15,5 +17,6 @@ export class Game{
         this.board.renderCards();
 
         console.log(this.deckHand.hand)
+        console.log(this.deckHand.deck)
     }
 }

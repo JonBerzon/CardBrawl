@@ -43,8 +43,8 @@ export class DeckHand{
             }
         }
         for (let i = 0; i < 20; i++) {
-            let j = Math.floor(Math.random() * 9);
-            let k = Math.floor(Math.random() * 9);
+            let j = Math.round(Math.random() * 9);
+            let k = Math.round(Math.random() * 9);
 
             [this.deck[j], this.deck[k]] = [this.deck[k], this.deck[j]];
         }
