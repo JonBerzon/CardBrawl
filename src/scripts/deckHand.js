@@ -88,17 +88,5 @@ export class DeckHand{
         })
     }
 
-    sendSelected(){
-        let mana = 0;
-        let damage = 0;
-        let shield = 0;
-        this.hand.forEach(card =>{
-            if (card.isSelected){
-                damage += card.atk;
-                shield += card.def;
-                mana += card.mana;
-            }
-        })
-        this.game.player.calculations(mana, damage, shield);
-    }
+    
 }

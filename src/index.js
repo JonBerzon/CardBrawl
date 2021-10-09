@@ -40,22 +40,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const playCards = document.getElementById("play-cards");
     playCards.addEventListener('click', ()=>{
-        // alert("clicked")
-        g.deckHand.sendSelected();
-        // document.getElementsByClassName("showHp")[0].innerHTML = `${g.player.hp}`;
+        g.sendSelected();
     })
 
     const resetButton = document.getElementById("reset-button")
     resetButton.addEventListener('click', ()=>{
-        g.player.fullReset();
+        g.fullReset();
     })
-
-    // const leftDiv = document.querySelector(".left")
-    // console.log(leftDiv)
-    // const ele = document.createElement("P");
-    // ele.classList.add("showHp")
-    // const text = document.createTextNode(`${g.player.hp}`);
-    // ele.appendChild(text);
-    // leftDiv.appendChild(ele);
 
 });

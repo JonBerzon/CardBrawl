@@ -1,33 +1,33 @@
 export class Player{
-    constructor(){
+    constructor(game){
         this.hp = 10;
         this.mana = 3;
         this.shield = 0;
+        this.game = game;
 
     }
-    calculations(mana, damage, shield){
-        
+    calculations(mana, damage, shield){  
         if (!this.useMana(mana)){
             alert("You used too much mana, try again.")
         } else {
             this.greyMana();
             this.addShield(shield)
             this.updateShields();
-            this.takeDamage(damage)
-            this.updateShields();
-            this.greyHealth();
-        }
-        
-        
+            this.dealDamage(damage);
+            // this.takeDamage(damage)
+            // this.updateShields();
+            // this.greyHealth();
+        } 
+        mana = 0;
+        damage = 0;
+        shield = 0;
     }
 
     fullReset(){
         this.reset();
-        this.hp = 10;
-        this.nonGreyHealth();
-
-
+        
     }
+
     nonGreyShields(){
         for (let i = 1; i < this.shield + 1; i++) {
             document.getElementById(`shield-${i}`).style.removeProperty('filter')
@@ -40,8 +40,7 @@ export class Player{
             document.getElementById(`shield-${i}`).style.filter = "grayscale(1)"
         }
         for (let j = 1; j < this.shield + 1; j++) {
-            document.getElementById(`shield-${j}`).style.removeProperty('filter')
-            
+            document.getElementById(`shield-${j}`).style.removeProperty('filter')  
         }
     }
 
@@ -56,6 +55,7 @@ export class Player{
             document.getElementById(`mana-${i}`).style.removeProperty('filter')
         }
     }
+
     greyHealth(){
         for (let i = 1; i < 10 - this.hp + 1; i++) {
             document.getElementById(`player-heart-${i}`).style.filter = "grayscale(1)";   
@@ -73,7 +73,14 @@ export class Player{
         this.shield = 0;
         this.updateShields();
         this.nonGreyMana();
-        
+        // this.game.monster.reset(); 
+        // this.game.basicStartup(); 
+        this.game.deckHand.deselect();
+        this.game.deckHand.dealCards();
+        this.game.board.renderCards();
+        console.log("hand test", this.game.deckHand.hand)
+        this.hp = 10;
+        this.nonGreyHealth();
     }
 
     addShield(num){
@@ -81,16 +88,25 @@ export class Player{
     }
 
     takeDamage(num){
-        let combinedHealth = this.shield + this.hp;
-        combinedHealth -= num;
-        if (this.hp >= combinedHealth) {
-            this.hp = combinedHealth;
-            this.shield = 0;
-        } else {
-            this.shield -= num;
-        }
+        
         if (!this.isAlive()) alert("You died")
     }
+
+    dealDamage(num){
+        this.game.monster.takeDamage(num)
+    }
+
+    // takeDamage(num){
+    //     let combinedHealth = this.shield + this.hp;
+    //     combinedHealth -= num;
+    //     if (this.hp >= combinedHealth) {
+    //         this.hp = combinedHealth;
+    //         this.shield = 0;
+    //     } else {
+    //         this.shield -= num;
+    //     }
+    //     if (!this.isAlive()) alert("You died")
+    // }
 
     useMana(num){
         this.mana -= num;

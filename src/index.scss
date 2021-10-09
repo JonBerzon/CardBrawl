@@ -31,12 +31,13 @@ canvas{
 }
 
 .title {
-    font-size: 50px;
-    color: #baa92b;
+    font-size: 100px;
+    color: #9c7c7c;
     background-color: inherit;
     letter-spacing: .1em;
+    font-family: luminari;
     text-shadow: 
-      0 -1px 0 #fff, 
+    //   0 -1px 0 #fff, 
       0 1px 0 #2e2e2e, 
       0 2px 0 #2c2c2c, 
       0 3px 0 #2a2a2a, 
@@ -183,4 +184,6 @@ header{
 
     
 }
+
+
 
