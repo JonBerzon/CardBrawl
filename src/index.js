@@ -53,4 +53,24 @@ document.addEventListener("DOMContentLoaded", function () {
         g.endTurn();
     });
 
+    const oomButton = document.getElementById("oom-button")
+    const manaOverlay = document.getElementById("mana-overlay")
+    oomButton.addEventListener('click', ()=>{
+        manaOverlay.style.display="none";
+    })
+
+    const playAgainButton = document.getElementById("play-again-button")
+    const gameWonOverlay = document.getElementById("game-won-overlay")
+    playAgainButton.addEventListener('click', ()=>{
+        gameWonOverlay.style.display = "none";
+        g.fullReset();
+    })
+
+    const playAgainButton1 = document.getElementById("play-again-button1")
+    const gameLostOverlay = document.getElementById("game-lost-overlay")
+    playAgainButton1.addEventListener('click', () => {
+        gameLostOverlay.style.display = "none";
+        g.fullReset();
+    })
+
 });

@@ -7,6 +7,24 @@ canvas {
   background-repeat: no-repeat;
 }
 
+#mana-overlay {
+  top: 400px;
+  left: 750px;
+  width: 500px;
+}
+
+.overlay {
+  position: absolute;
+  font-size: 40px;
+  background-color: #4a5353;
+  border: 5px solid rgba(211, 211, 211, 0.315);
+  text-align: center;
+  color: white;
+  top: 400px;
+  left: 750px;
+  width: 500px;
+}
+
 .canvas-div {
   display: flex;
   justify-content: center;

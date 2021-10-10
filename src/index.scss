@@ -1,8 +1,33 @@
+.mid{
+    // position: relative;
+}
+
 canvas{
     background-image: url(../src/img/board_nolight_withline.png);
     background-size: 100%;
     background-repeat: no-repeat;
+    // position: absolute;
 }
+#mana-overlay{
+    top: 400px;
+    left: 750px;
+    width: 500px;
+
+}
+
+.overlay{
+    position: absolute;
+    font-size: 40px;
+    
+    background-color: #4a5353;
+    border: 5px solid rgb(211,211,211,.315);
+    text-align: center;
+    color: white;
+    top: 400px;
+    left: 750px;
+    width: 500px;
+}
+
 
 .canvas-div{
     display: flex;
@@ -192,6 +217,8 @@ header{
 
 
 }
+
+
 
 
 

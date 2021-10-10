@@ -14,7 +14,7 @@ export class Player{
 
     populateDeck() {
         for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakAttack", 1, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
+            this.deckHand.deck.push(new Card("weakAttack", 10, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
         }
 
 
@@ -32,7 +32,11 @@ export class Player{
         if (!this.useMana(mana)){
             this.mana += mana
             this.greyMana();
-            alert("You used too much mana, try again.")
+            // alert("You used too much mana, try again.")
+            const manaOverlay = document.getElementById("mana-overlay")
+            manaOverlay.style.display = "";
+
+
         } else {
             this.greyMana();
             this.addShield(shield)
@@ -136,7 +140,10 @@ export class Player{
         } else {
             this.shield -= num;
         }
-        if (!this.isAlive()) alert("You died")
+        if (!this.isAlive()){
+            const gameLostOverlay = document.getElementById("game-lost-overlay")
+            gameLostOverlay.style.display = ""
+        }
 
         this.greyHealth();
     }

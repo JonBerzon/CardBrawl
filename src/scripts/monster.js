@@ -93,7 +93,9 @@ export class Monster{
     }
 
     isAlive(){
-        if (this.hp <= 0) alert("you won")
+        if (this.hp <= 0) {
+            document.getElementById("game-won-overlay").style.display = "";
+        }
     }
 
 }
