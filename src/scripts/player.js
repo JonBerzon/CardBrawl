@@ -30,6 +30,8 @@ export class Player{
 
     calculations(mana, damage, shield){  
         if (!this.useMana(mana)){
+            this.mana += mana
+            this.greyMana();
             alert("You used too much mana, try again.")
         } else {
             this.greyMana();
@@ -115,26 +117,29 @@ export class Player{
         this.shield += num;  
     }
 
-    takeDamage(num){
+    // takeDamage(num){
         
-        if (!this.isAlive()) alert("You died")
-    }
+    //     if (!this.isAlive()) alert("You died")
+    // }
 
     dealDamage(num){
         this.game.monster.takeDamage(num)
+        this.game.monster.isAlive();
     }
 
-    // takeDamage(num){
-    //     let combinedHealth = this.shield + this.hp;
-    //     combinedHealth -= num;
-    //     if (this.hp >= combinedHealth) {
-    //         this.hp = combinedHealth;
-    //         this.shield = 0;
-    //     } else {
-    //         this.shield -= num;
-    //     }
-    //     if (!this.isAlive()) alert("You died")
-    // }
+    takeDamage(num){
+        let combinedHealth = this.shield + this.hp;
+        combinedHealth -= num;
+        if (this.hp >= combinedHealth) {
+            this.hp = combinedHealth;
+            this.shield = 0;
+        } else {
+            this.shield -= num;
+        }
+        if (!this.isAlive()) alert("You died")
+
+        this.greyHealth();
+    }
 
     useMana(num){
         this.mana -= num;

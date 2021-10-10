@@ -30,8 +30,9 @@ export class DeckHand{
             }
         }
         for (let i = 0; i < 20; i++) {
-            let j = Math.round(Math.random() * 9);
-            let k = Math.round(Math.random() * 9);
+            // debugger
+            let j = Math.round(Math.random() * (this.deck.length - 1));
+            let k = Math.round(Math.random() * (this.deck.length - 1));
 
             [this.deck[j], this.deck[k]] = [this.deck[k], this.deck[j]];
         }

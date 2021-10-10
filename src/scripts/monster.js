@@ -18,11 +18,15 @@ export class Monster{
 
 
         for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakDef", 0, 3, 1, this.deckHand, "src/img/cards/weakd.png"));
+            this.deckHand.deck.push(new Card("weakDef", 0, 1, 1, this.deckHand, "src/img/cards/weakd.png"));
         }
 
         this.deckHand.deck.push(new Card("strongAttack", 5, 0, 2, this.deckHand, "src/img/cards/stronga.png"));
-        this.deckHand.deck.push(new Card("stronDef", 0, 5, 2, this.deckHand, "src/img/cards/strongd.png"));
+        this.deckHand.deck.push(new Card("stronDef", 0, 3, 2, this.deckHand, "src/img/cards/strongd.png"));
+    }
+
+    showCurrentCard(){
+        document.getElementById("monster-card-slot").src=`${this.deckHand.deck[0].src}`
     }
 
     takeDamage(num){
@@ -40,6 +44,8 @@ export class Monster{
     reset(){
         this.hp = 20;
         this.nonGreyHealth();
+        this.deckHand.shuffleDeck();
+        this.showCurrentCard();
     }
 
     greyHealth() {
@@ -54,13 +60,40 @@ export class Monster{
         }
     }
 
+    updateHp() {
+        for (let i = 20; this.hp < i; i--) {
+            document.getElementById(`monster-heart-${i}`).style.filter = "grayscale(1)"
+        }
+        for (let j = 1; j < this.hp + 1; j++) {
+            document.getElementById(`monster-heart-${i}`).style.removeProperty('filter')
+        }
+    }
+
     monsterTurn(){
-        monsterAttack();
+        console.log(this)
+        this.monsterAttack();
+        this.monsterHeal();
+        this.deckHand.shuffleDeck();
+        this.showCurrentCard();
         //NEEDS TO BE WRITTEN
     }
 
+    monsterHeal(){
+        let heal = this.deckHand.deck[0].def;
+        // debugger
+        this.hp += heal;
+        if (this.hp > 20) this.hp = 20;
+        this.nonGreyHealth();
+        this.greyHealth();
+    }
+
     monsterAttack(){
-        //NEEDS TO BE WRITTEN
+        let dmg = this.deckHand.deck[0].atk;
+        this.game.player.takeDamage(dmg);
+    }
+
+    isAlive(){
+        if (this.hp <= 0) alert("you won")
     }
 
 }

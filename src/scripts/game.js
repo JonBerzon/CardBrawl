@@ -21,11 +21,9 @@ export class Game{
         this.player.deckHand.shuffleDeck();
         this.monster.populateDeck();
         this.monster.deckHand.shuffleDeck();
-
-        // debugger
-        // debugger
         this.player.deckHand.dealCards();
         this.board.renderCards();
+        this.monster.showCurrentCard();
 
         // console.log(this.deckHand.hand)
         // console.log(this.deckHand.deck)
@@ -78,8 +76,8 @@ export class Game{
 
     endTurn(){
         this.resetRemoveCard();
-        this.player.endReset();
         this.monster.monsterTurn();//NEEDS TO BE WRITTEN
+        this.player.endReset();
         
 
 
