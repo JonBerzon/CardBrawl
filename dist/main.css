@@ -183,3 +183,11 @@ header {
   margin-right: auto;
   background-color: #4a5353;
 }
+
+.links {
+  background-color: #4a5353;
+}
+
+#links-div {
+  margin-top: 18px;
+}
