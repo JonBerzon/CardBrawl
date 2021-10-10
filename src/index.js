@@ -31,8 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(x,y)
         cardSlots.forEach(function (ele, index){
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
-                console.log(g.deckHand.hand[index])
-                g.deckHand.hand[index].select();
+                // console.clog()
+                if (!g.noLoadPos.includes(index)) g.deckHand.hand[index].select();
+                
             }
         });
         

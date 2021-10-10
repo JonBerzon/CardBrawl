@@ -14,6 +14,7 @@ export class Player{
             this.addShield(shield)
             this.updateShields();
             this.dealDamage(damage);
+            this.game.removeCard();
             // this.takeDamage(damage)
             // this.updateShields();
             // this.greyHealth();

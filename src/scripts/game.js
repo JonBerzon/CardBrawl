@@ -11,6 +11,8 @@ export class Game{
         this.deckHand = new DeckHand(this, this.board);
         this.player = new Player(this);
         this.monster = new Monster();
+        this.cardClear = [];
+        this.noLoadPos = [];
     }
 
     basicStartup(){
@@ -37,7 +39,32 @@ export class Game{
     }
 
     fullReset(){
+        this.resetRemoveCard();
         this.player.reset();
         this.monster.reset();
+        
+    }
+
+    removeCard(){
+        let pos = null;
+        this.deckHand.hand.forEach(card=>{
+            if (card.isSelected) pos = card.pos
+        })
+        if (pos !== null){
+            this.cardClear.push(()=>this.ctx.clearRect(290 + (pos * 180), 440, 174, 218))
+            this.noLoadPos.push(pos);
+        }
+        this.remove();
+        
+    }
+    remove(){
+        for (let i = 0; i < this.cardClear.length; i++) {
+            this.cardClear[i]();
+        }
+    }
+
+    resetRemoveCard(){
+        this.cardClear = [];
+        this.noLoadPos = [];
     }
 }

@@ -20,6 +20,7 @@ export class Board{
             
             
         }
+        this.game.remove();
     }
 
     demonAnimation(){
@@ -43,13 +44,19 @@ export class Board{
         this.placeImages(45, 440, 20, ['./src/img/cards/cback.png']);
 
         // this.placeImages(290, 440, .6, 180, arr);
+        this.game.noLoadPos.forEach(pos=>{
+            arr[pos] = ""
+        })
         this.placeImages(290, 440, 180, arr);
+        this.game.remove();
 
     }
 
     highlight(index){
         let x = 290 + (index * 180);
         this.placeImages(x, 440, 0, ['./src/img/cards/highlight.png'])
+        this.game.remove();
+
     }
 
     clearHighlight(){
@@ -57,6 +64,8 @@ export class Board{
             this.ctx.clearRect(279, 434, 1000, 1000)
         }
         this.renderCards();
+        this.game.remove();
+
     }
 
     
