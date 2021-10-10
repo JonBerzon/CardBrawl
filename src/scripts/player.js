@@ -1,11 +1,33 @@
+import { DeckHand } from "./deckHand";
+import { Card } from "./card"
+
+
 export class Player{
     constructor(game){
         this.hp = 10;
         this.mana = 3;
         this.shield = 0;
         this.game = game;
+        this.deckHand = new DeckHand(this.game, this.game.board)
 
     }
+
+    populateDeck() {
+        for (let i = 0; i < 4; i++) {
+            this.deckHand.deck.push(new Card("weakAttack", 1, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
+        }
+
+
+        for (let i = 0; i < 4; i++) {
+            this.deckHand.deck.push(new Card("weakDef", 0, 1, 1, this.deckHand, "src/img/cards/weakd.png"));
+        }
+
+        this.deckHand.deck.push(new Card("strongAttack", 3, 0, 2, this.deckHand, "src/img/cards/stronga.png"));
+        this.deckHand.deck.push(new Card("stronDef", 0, 3, 2, this.deckHand, "src/img/cards/strongd.png"));
+    }
+
+
+
     calculations(mana, damage, shield){  
         if (!this.useMana(mana)){
             alert("You used too much mana, try again.")
@@ -15,9 +37,6 @@ export class Player{
             this.updateShields();
             this.dealDamage(damage);
             this.game.removeCard();
-            // this.takeDamage(damage)
-            // this.updateShields();
-            // this.greyHealth();
         } 
         mana = 0;
         damage = 0;
@@ -74,14 +93,22 @@ export class Player{
         this.shield = 0;
         this.updateShields();
         this.nonGreyMana();
-        // this.game.monster.reset(); 
-        // this.game.basicStartup(); 
-        this.game.deckHand.deselect();
-        this.game.deckHand.dealCards();
+        this.deckHand.deselect();
+        this.deckHand.dealCards();
         this.game.board.renderCards();
-        console.log("hand test", this.game.deckHand.hand)
         this.hp = 10;
         this.nonGreyHealth();
+    }
+
+    endReset(){
+        this.mana = 3;
+        this.shield = 0;
+        this.updateShields();
+        this.nonGreyMana();
+        this.deckHand.deselect();
+        this.deckHand.dealCards();
+        this.game.board.renderCards();
+
     }
 
     addShield(num){

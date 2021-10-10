@@ -38,7 +38,7 @@ export class Board{
 
     renderCards(){
         let arr = [];
-        this.game.deckHand.hand.forEach(card=>{
+        this.game.player.deckHand.hand.forEach(card=>{
             arr.push(card.src)
         });
         this.placeImages(45, 440, 20, ['./src/img/cards/cback.png']);

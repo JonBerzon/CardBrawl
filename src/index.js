@@ -26,27 +26,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     
     canvas.addEventListener('click', function(event){
-        let x = event.pageX - canvas.offsetLeft //sets x to
-        let y = event.pageY - canvas.offsetTop  
-        console.log(x,y)
+        let x = event.pageX - canvas.offsetLeft;
+        let y = event.pageY - canvas.offsetTop;  
+        console.log(x,y);
         cardSlots.forEach(function (ele, index){
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
-                // console.clog()
-                if (!g.noLoadPos.includes(index)) g.deckHand.hand[index].select();
+                if (!g.noLoadPos.includes(index)) g.player.deckHand.hand[index].select();
                 
             }
         });
         
     });
 
-    const playCards = document.getElementById("play-cards");
-    playCards.addEventListener('click', ()=>{
+    const playCardsButton = document.getElementById("play-cards-button");
+    playCardsButton.addEventListener('click', ()=>{
         g.sendSelected();
-    })
+    });
 
     const resetButton = document.getElementById("reset-button")
     resetButton.addEventListener('click', ()=>{
         g.fullReset();
-    })
+    });
+
+    const endTurnButton = document.getElementById("end-turn-button")
+    endTurnButton.addEventListener('click', ()=>{
+        g.endTurn();
+    });
 
 });

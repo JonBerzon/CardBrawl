@@ -12,17 +12,14 @@ export class Card{
     }
 
     select(){
-        
-
+       
         if (this.isSelected === false){
             this.deckHand.deselect();
             this.isSelected = true;
-            
             this.deckHand.highlightCard();
         } else {
             this.isSelected = false;
-            this.deckHand.deselect();
-
+            this.deckhand.deselect();
         } 
     }  
 
