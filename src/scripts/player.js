@@ -14,7 +14,7 @@ export class Player{
 
     populateDeck() {
         for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakAttack", 10, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
+            this.deckHand.deck.push(new Card("weakAttack", 1, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
         }
 
 

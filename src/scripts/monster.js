@@ -12,17 +12,21 @@ export class Monster{
     }
 
     populateDeck() {
-        for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakAttack", 3, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
+        for (let i = 0; i < 2; i++) {
+            this.deckHand.deck.push(new Card("weakAttack", 2, 0, 1, this.deckHand, "src/img/boss_cards/atk4.png"));
+        }
+
+        for (let i = 0; i < 2; i++) {
+            this.deckHand.deck.push(new Card("weakAttack+Heal", 2, 1, 1, this.deckHand, "src/img/boss_cards/atk1.png"));
         }
 
 
-        for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakDef", 0, 1, 1, this.deckHand, "src/img/cards/weakd.png"));
+        for (let i = 0; i < 3; i++) {
+            this.deckHand.deck.push(new Card("medAttack", 3, 0, 1, this.deckHand, "src/img/boss_cards/atk2.png"));
         }
 
-        this.deckHand.deck.push(new Card("strongAttack", 5, 0, 2, this.deckHand, "src/img/cards/stronga.png"));
-        this.deckHand.deck.push(new Card("stronDef", 0, 3, 2, this.deckHand, "src/img/cards/strongd.png"));
+        this.deckHand.deck.push(new Card("strongAttack", 5, 0, 2, this.deckHand, "src/img/boss_cards/atk3.png"));
+        this.deckHand.deck.push(new Card("stronHeal", 0, 3, 2, this.deckHand, "src/img/boss_cards/shield1.png"));
     }
 
     showCurrentCard(){

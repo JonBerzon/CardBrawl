@@ -65,7 +65,6 @@ export class Board{
         }
         this.renderCards();
         this.game.remove();
-
     }
 
     
