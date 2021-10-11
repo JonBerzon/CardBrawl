@@ -1,5 +1,6 @@
 import { DeckHand } from "./deckHand"
 import { Card } from "./card"
+import { htmlUtil } from "./htmlUtil";
 
 
 export class Monster{
@@ -8,6 +9,8 @@ export class Monster{
         this.shield = 0;
         this.game = game;
         this.deckHand = new DeckHand(this.game, this.game.board)
+        this.populateDeck();
+        this.deckHand.shuffleDeck();
 
     }
 
@@ -42,6 +45,7 @@ export class Monster{
         } else {
             this.shield -= num;
         }
+        this.isAlive();
         this.greyHealth();
     }
 
@@ -98,6 +102,7 @@ export class Monster{
 
     isAlive(){
         if (this.hp <= 0) {
+            htmlUtil.overlayBlurOn();
             document.getElementById("game-won-overlay").style.display = "";
         }
     }

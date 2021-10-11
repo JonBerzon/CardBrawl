@@ -1,5 +1,6 @@
 import { DeckHand } from "./deckHand";
 import { Card } from "./card"
+import { htmlUtil } from "./htmlUtil";
 
 
 export class Player{
@@ -9,12 +10,14 @@ export class Player{
         this.shield = 0;
         this.game = game;
         this.deckHand = new DeckHand(this.game, this.game.board)
+        this.populateDeck();
+        this.deckHand.shuffleDeck();
 
     }
 
     populateDeck() {
         for (let i = 0; i < 4; i++) {
-            this.deckHand.deck.push(new Card("weakAttack", 1, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
+            this.deckHand.deck.push(new Card("weakAttack", 20, 0, 1, this.deckHand, "src/img/cards/weaka.png"));
         }
 
 
@@ -32,11 +35,9 @@ export class Player{
         if (!this.useMana(mana)){
             this.mana += mana
             this.greyMana();
-            // alert("You used too much mana, try again.")
             const manaOverlay = document.getElementById("mana-overlay")
+            htmlUtil.overlayBlurOn();
             manaOverlay.style.display = "";
-
-
         } else {
             this.greyMana();
             this.addShield(shield)
@@ -121,14 +122,9 @@ export class Player{
         this.shield += num;  
     }
 
-    // takeDamage(num){
-        
-    //     if (!this.isAlive()) alert("You died")
-    // }
 
     dealDamage(num){
         this.game.monster.takeDamage(num)
-        this.game.monster.isAlive();
     }
 
     takeDamage(num){
@@ -142,6 +138,7 @@ export class Player{
         }
         if (!this.isAlive()){
             const gameLostOverlay = document.getElementById("game-lost-overlay")
+            htmlUtil.overlayBlurOn();
             gameLostOverlay.style.display = ""
         }
 

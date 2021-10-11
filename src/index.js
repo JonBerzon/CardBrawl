@@ -2,6 +2,8 @@ import { Board } from "./scripts/board";
 import { DeckHand } from "./scripts/deckHand"
 import { Card } from "./scripts/card"
 import { Game } from "./scripts/game";
+import { htmlUtil } from "./scripts/htmlUtil";
+import { Tutorial } from "./scripts/tutorial";
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("game-canvas");
@@ -57,6 +59,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const manaOverlay = document.getElementById("mana-overlay")
     oomButton.addEventListener('click', ()=>{
         manaOverlay.style.display="none";
+        htmlUtil.overlayBlurOff();
     })
 
     const playAgainButton = document.getElementById("play-again-button")
@@ -64,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
     playAgainButton.addEventListener('click', ()=>{
         gameWonOverlay.style.display = "none";
         g.fullReset();
+        htmlUtil.overlayBlurOff();
     })
 
     const playAgainButton1 = document.getElementById("play-again-button1")
@@ -71,6 +75,22 @@ document.addEventListener("DOMContentLoaded", function () {
     playAgainButton1.addEventListener('click', () => {
         gameLostOverlay.style.display = "none";
         g.fullReset();
+        htmlUtil.overlayBlurOff();
+    })
+
+    const tutorialButton = document.getElementById("tutorial-button")
+    tutorialButton.addEventListener('click', ()=>{
+        Tutorial.first();
+    })
+
+    const tutorialButton1 = document.getElementById("tutorial-button-1")
+    tutorialButton1.addEventListener('click', () => {
+        Tutorial.second();
+    })
+
+    const tutorialButton2 = document.getElementById("tutorial-button-2")
+    tutorialButton2.addEventListener('click', () => {
+        Tutorial.third();
     })
 
 });

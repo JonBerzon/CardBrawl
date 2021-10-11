@@ -17,10 +17,6 @@ export class Game{
 
     basicStartup(){
         this.board.demonAnimation();
-        this.player.populateDeck();
-        this.player.deckHand.shuffleDeck();
-        this.monster.populateDeck();
-        this.monster.deckHand.shuffleDeck();
         this.player.deckHand.dealCards();
         this.board.renderCards();
         this.monster.showCurrentCard();

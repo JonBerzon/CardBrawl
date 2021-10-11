@@ -70,20 +70,42 @@
             <div class="canvas-div">
                 <canvas id="game-canvas"></canvas>
             </div>
-            <div>
-                <h1 id="mana-overlay" class="overlay" style="display:none">You used too much mana. Either end your turn or pick a different card.
+            <div id="overlay-div">
+                <h1 id="mana-overlay" class="overlay mid-overlay" style="display:none">You used too much mana. Either end your turn or pick a different card.
                     <br>
                     <button class="myButton" id="oom-button" >Continue</button>
                 </h1>
-                <h1 id="game-won-overlay" class="overlay" style="display:none">You defeated Alvin! Feel free to play again or check out my links!
+                <h1 id="game-won-overlay" class="overlay mid-overlay" style="display:none">You defeated Alvin! Feel free to play again or check out my links!
                     <br>
                     <button class="myButton" id="play-again-button">Play Again</button>
                 </h1>
-                <h1 id="game-lost-overlay" class="overlay" style="display:none">You lost to Alvin! Feel free to play again or check out
+                <h1 id="game-lost-overlay" class="overlay mid-overlay" style="display:none">You lost to Alvin! Feel free to play again or check out
                     my links!
                     <br>
                     <button class="myButton" id="play-again-button1">Play Again</button>
                 </h1>
+            </div>
+            <div id="tutorial-div">
+                <h1 id="tutorial-1" class="overlay" style="display:none">
+                    Welcome to Card Brawl, a fun interactive card game where you get to battle Alvin, the blue floating demon guy over there.
+                    <br>
+                    <button class="myButton" id="tutorial-button-1"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-2" class="overlay" style="display:none">
+                    To the left here, we can see you, the handsome little knight at the top. <hr> Under you, we can see your <span class="red">health</span>, <span class="blue">mana</span>,and <span class="brown">shields</span>. When your <span class="red">health</span> reaches 0, you lose. Try not to let that happen. <hr>You can use shield cards to gain <span class="brown">shields</span> which deflect incoming damage from Alvin. <hr>You also have 3 <span class="blue">mana</span>, listed below your <span class="red">health</span>. Each card has a <span class="blue">mana</span> cost. Use your <span class="blue">mana</span> wisely to combine cards for the best outcome.
+                    <br>
+                    <button class="myButton" id="tutorial-button-2"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-3" class="overlay" style="display:none">
+                    To the right here we see Alvin at the top, his <span class="red">health</span> right below him, and below that we see the card he's about to play (cards will be explained in the next section). <hr>Finally, we can see the <span class="yellow">Play Cards</span> and <span class="yellow">End Turn</span> button.<hr> <span class="yellow">Play Cards</span> will play the card you've selected by clicking on it and highlighting it yellow. You can only select one card at a time. <hr> <span class="yellow">End Turn</span> will complete your turn, and give Alvin a chance to fight back with his selected card.
+                    <br>
+                    <button class="myButton" id="tutorial-button-3"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-3" class="overlay" style="display:none">
+                    <br>
+                    <button class="myButton" id="tutorial-button-3"></buttonclass>Continue</button>
+                </h1>
+
             </div>
         </div>
     

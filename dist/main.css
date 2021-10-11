@@ -7,10 +7,50 @@ canvas {
   background-repeat: no-repeat;
 }
 
-#mana-overlay {
-  top: 400px;
-  left: 750px;
+.mid-overlay {
+  top: 35%;
+  left: 40%;
   width: 500px;
+}
+
+#tutorial-1 {
+  top: 26%;
+  left: 20%;
+  width: 500px;
+}
+
+#tutorial-2 {
+  top: 26%;
+  left: 20%;
+  width: 600px;
+  font-size: 30px;
+}
+
+#tutorial-3 {
+  top: 25.5%;
+  left: 48.5%;
+  width: 600px;
+  font-size: 30px;
+}
+
+.red {
+  background-color: #4a5353;
+  color: red;
+}
+
+.blue {
+  background-color: #4a5353;
+  color: #40b1da;
+}
+
+.brown {
+  background-color: #4a5353;
+  color: #93510b;
+}
+
+.yellow {
+  background-color: #4a5353;
+  color: yellow;
 }
 
 .overlay {
@@ -18,11 +58,9 @@ canvas {
   font-size: 40px;
   background-color: #4a5353;
   border: 5px solid rgba(211, 211, 211, 0.315);
+  border-radius: 10px;
   text-align: center;
   color: white;
-  top: 400px;
-  left: 750px;
-  width: 500px;
 }
 
 .canvas-div {
@@ -190,4 +228,13 @@ header {
 
 #links-div {
   margin-top: 18px;
+}
+
+#background-blur {
+  filter: blur(4px);
+  filter: none;
+}
+
+img {
+  background-color: #4a5353;
 }
