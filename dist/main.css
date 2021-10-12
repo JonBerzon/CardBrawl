@@ -165,10 +165,6 @@ a {
   padding-left: 90px;
 }
 
-* {
-  background-color: #3f3f3f;
-}
-
 .main {
   display: flex;
   justify-content: space-evenly;
@@ -300,4 +296,8 @@ header {
 
 img {
   background-color: #4a5353;
+}
+
+body {
+  background-image: url(../src/img/background/wall_test.png);
 }
