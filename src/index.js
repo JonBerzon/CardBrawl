@@ -4,6 +4,7 @@ import { Card } from "./scripts/card"
 import { Game } from "./scripts/game";
 import { htmlUtil } from "./scripts/htmlUtil";
 import { Tutorial } from "./scripts/tutorial";
+import { LandingPage } from "./scripts/landingPage";
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("game-canvas");
@@ -15,6 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let g = new Game(canvas,ctx)
     g.basicStartup();
+
+    let lp = new LandingPage();
+    lp.startup();
+    lp.startup1();
 
     let cardSlots = [];
     let left = 290;

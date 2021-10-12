@@ -9,7 +9,7 @@
   "scripts": {
     "watch": "webpack --watch --mode=development",
     "build": "webpack --mode=production"
-  },  
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JonBerzon/CardBrawl.git"
@@ -20,5 +20,18 @@
   "bugs": {
     "url": "https://github.com/JonBerzon/CardBrawl/issues"
   },
-  "homepage": "https://github.com/JonBerzon/CardBrawl#readme"
+  "homepage": "https://github.com/JonBerzon/CardBrawl#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.2",
+    "core-js": "^3.18.3",
+    "css-loader": "^6.4.0",
+    "mini-css-extract-plugin": "^2.4.2",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.2.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.9.0"
+  }
 }

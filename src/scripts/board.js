@@ -1,10 +1,14 @@
+
+
 export class Board{
     constructor(canvas, ctx, game){
         this.canvas = canvas;
         this.ctx = ctx;
         this.game = game;
         this.imgSet = {}
-        this.j = 1;
+        this.j = 0;
+        this.img = new Image();
+        this.img.src = "./src/img/animation/1.png"
     }
 
     placeImages(x, y, dist, src) {
@@ -20,21 +24,39 @@ export class Board{
             
             
         }
-        this.game.remove();
+        // this.game.remove();
     }
 
-    demonAnimation(){
-        let j = 1;
-        setInterval(() => {
-            if (j === 7) {
-                j = 1;
+    // demonAnimation(){
+    //     let j = 1;
+    //     setInterval(() => {
+    //         if (j === 7) {
+    //             j = 1;
+    //         }
+    //         this.ctx.clearRect(600, 60, 400, 350);
+    //         this.placeImages(600, 60, 0, [`./src/img/demon_idle/${j}.png`])
+    //         j += 1;
+
+    //     }, 70);
+    // }
+
+
+
+    demonAnimation(bool){
+        let j = 0;
+        const intervalId = setInterval(() => {
+            if (j === 6) {
+                j = 0;
+                if (bool) {
+                    clearInterval(intervalId);
+                }
             }
-            this.ctx.clearRect(600, 60, 400, 350);
-            this.placeImages(600, 60, 0, [`./src/img/demon_idle/${j}.png`])
+            this.ctx.clearRect(500, 20, 400, 350);
+            this.ctx.drawImage(this.img, 0 + (j * 160), 0 , 155, 130, 500 , 20, 380, 350)
             j += 1;
-
-        }, 70);
+        }, 80);
     }
+   
 
     renderCards(){
         let arr = [];

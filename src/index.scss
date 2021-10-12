@@ -1,12 +1,17 @@
-.mid{
-    // position: relative;
-}
+// .mid{
+//     // position: relative;
+// }
 
-canvas{
+#game-canvas{
     background-image: url(../src/img/board_nolight_withline.png);
     background-size: 100%;
     background-repeat: no-repeat;
     // position: absolute;
+}
+
+#startup-div{
+    display: flex;
+    justify-content: center;
 }
 .mid-overlay{
     // top: 400px;
@@ -340,9 +345,9 @@ body{
     background-image: url(../src/img/background/wall_test.png);
 }
 
-*{
-    // background-color: rgb(77, 66, 70);
-    // background-color: rgb(63, 63, 63);
+// *{
+//     // background-color: rgb(77, 66, 70);
+//     // background-color: rgb(63, 63, 63);
     
-}
+// }
 
