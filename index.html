@@ -14,7 +14,7 @@
     <header>
         <nav>
             <ul class="nav-ul">
-                <h1 class="title">Card Brawl</h1>
+                <h1 class="title">Card Brawl</h1>   
             </ul>
         </nav>
     </header>
@@ -92,18 +92,37 @@
                     <button class="myButton" id="tutorial-button-1"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-2" class="overlay" style="display:none">
-                    To the left here, we can see you, the handsome little knight at the top. <hr> Under you, we can see your <span class="red">health</span>, <span class="blue">mana</span>,and <span class="brown">shields</span>. When your <span class="red">health</span> reaches 0, you lose. Try not to let that happen. <hr>You can use shield cards to gain <span class="brown">shields</span> which deflect incoming damage from Alvin. <hr>You also have 3 <span class="blue">mana</span>, listed below your <span class="red">health</span>. Each card has a <span class="blue">mana</span> cost. Use your <span class="blue">mana</span> wisely to combine cards for the best outcome.
+                    To the left here, we can see you, the handsome little knight at the top. <hr> Under your icon, we can see your <span class="red">health</span>  <img class="make-slightly-bigger" src="./src/img/non_canvas/heart.png">, <span class="blue">mana</span> <img class="make-slightly-bigger" src="./src/img/non_canvas/mana.png">,and <span class="brown">shields</span> <img src="./src/img/non_canvas/shield.png">. When your <span class="red">health</span> reaches 0, you lose. Try not to let that happen. <hr>You can use shield cards to gain <span class="brown">shields</span> which deflect incoming damage from Alvin. <hr>You also have 3 <span class="blue">mana</span>, listed below your <span class="red">health</span>. Each card has a <span class="blue">mana</span> cost. Use your <span class="blue">mana</span> wisely to combine cards for the best outcome.
                     <br>
                     <button class="myButton" id="tutorial-button-2"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-3" class="overlay" style="display:none">
-                    To the right here we see Alvin at the top, his <span class="red">health</span> right below him, and below that we see the card he's about to play (cards will be explained in the next section). <hr>Finally, we can see the <span class="yellow">Play Cards</span> and <span class="yellow">End Turn</span> button.<hr> <span class="yellow">Play Cards</span> will play the card you've selected by clicking on it and highlighting it yellow. You can only select one card at a time. <hr> <span class="yellow">End Turn</span> will complete your turn, and give Alvin a chance to fight back with his selected card.
+                    To the right here we see Alvin at the top, his <span class="red">health</span> right below him, and finally the card he's about to play (cards will be explained in the next section). <hr>At the bottom, we can see the <span class="yellow">Play Cards</span> and <span class="yellow">End Turn</span> button.<hr> <span class="yellow">Play Cards</span> will play the card you've selected by clicking on it and highlighting it yellow. You can only select one card at a time. <hr> <span class="yellow">End Turn</span> will complete your turn, and give Alvin a chance to fight back with his selected card.
                     <br>
                     <button class="myButton" id="tutorial-button-3"></buttonclass>Continue</button>
                 </h1>
-                <h1 id="tutorial-3" class="overlay" style="display:none">
+                <h1 id="tutorial-4" class="overlay" style="display:none">
+                    <img id="tutorial-card-1" src="./src/img/cards/weaka.png">
+                    This is an <span class="red">attack</span> card. The card text describes the action you will take by placing that card. In this instance you would deal one damage to Alvin.<hr> In the top left corner you'll notice a blue potion <img class="make-slightly-bigger" src="./src/img/non_canvas/mana.png" >. This is the <span class="blue">mana</span> cost of your card. As mentioned before you only have 3 mana per turn, so pay close attention to the mana you use.
                     <br>
-                    <button class="myButton" id="tutorial-button-3"></buttonclass>Continue</button>
+                    <button class="myButton" id="tutorial-button-4"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-5" class="overlay" style="display:none">
+                    <img id="tutorial-card-2" src="./src/img/cards/weakd.png">
+                    This is a <span class="brown">shield</span> card. Just as with attack cards, the card text will indicate the action you will take. Shield cards block incoming damage from Alvins attacks. You can see your current shields over to the left when you see this icon lit up <img src="./src/img/non_canvas/shield.png" alt="">. You will not survive without these, so be sure to protect yourself!
+                    <br>
+                    <button class="myButton" id="tutorial-button-5"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-6" class="overlay" style="display:none">
+                    <img id="tutorial-card-3" src="./src/img/boss_cards/atk1.png">
+                    Lastly, let's take a look at Alvin's cards. They follow the same structure as yours, except he doesn't use mana and he can only play one card at a time. As you can see on the card to the left, Alvin's special mechanic is that he can <span class="green">heal</span> himself. Don't expect Alvin to go down without a fight.
+                    <br>
+                    <button class="myButton" id="tutorial-button-6"></buttonclass>Continue</button>
+                </h1>
+                <h1 id="tutorial-7" class="overlay" style="display:none">
+                    This concludes the tutorial. I hope you have as much fun playing as I did making it!
+                    <br>
+                    <button class="myButton" id="tutorial-button-7"></buttonclass>Lets Play!</button>
                 </h1>
 
             </div>
@@ -153,6 +172,7 @@
             
         </div>
     </div>
+    
 
     
 </body>

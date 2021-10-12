@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
     oomButton.addEventListener('click', ()=>{
         manaOverlay.style.display="none";
         htmlUtil.overlayBlurOff();
-    })
+    });
 
     const playAgainButton = document.getElementById("play-again-button")
     const gameWonOverlay = document.getElementById("game-won-overlay")
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gameWonOverlay.style.display = "none";
         g.fullReset();
         htmlUtil.overlayBlurOff();
-    })
+    });
 
     const playAgainButton1 = document.getElementById("play-again-button1")
     const gameLostOverlay = document.getElementById("game-lost-overlay")
@@ -76,21 +76,48 @@ document.addEventListener("DOMContentLoaded", function () {
         gameLostOverlay.style.display = "none";
         g.fullReset();
         htmlUtil.overlayBlurOff();
-    })
+    });
 
     const tutorialButton = document.getElementById("tutorial-button")
     tutorialButton.addEventListener('click', ()=>{
         Tutorial.first();
-    })
+    });
 
     const tutorialButton1 = document.getElementById("tutorial-button-1")
     tutorialButton1.addEventListener('click', () => {
         Tutorial.second();
-    })
+    });
 
     const tutorialButton2 = document.getElementById("tutorial-button-2")
     tutorialButton2.addEventListener('click', () => {
         Tutorial.third();
+    });
+
+    const tutorialButton3 = document.getElementById("tutorial-button-3")
+    tutorialButton3.addEventListener('click', () =>{
+        Tutorial.fourth();
+    })
+
+    const tutorialButton4 = document.getElementById("tutorial-button-4")
+    tutorialButton4.addEventListener('click', () => {
+        Tutorial.fifth();
+    })
+
+    const tutorialButton5 = document.getElementById("tutorial-button-5")
+    tutorialButton5.addEventListener('click', () => {
+        Tutorial.sixth();
+    })
+
+    const tutorialButton6 = document.getElementById("tutorial-button-6")
+    tutorialButton6.addEventListener('click', () => {
+        Tutorial.seventh();
+    })
+
+    const tutorialButton7 = document.getElementById("tutorial-button-7")
+    tutorialButton7.addEventListener('click', () => {
+        const tutorial7 = document.getElementById("tutorial-7");
+        tutorial7.style.display = "none";
+        htmlUtil.tutorial4BlurOff();
     })
 
 });

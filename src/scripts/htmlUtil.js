@@ -112,6 +112,28 @@ const htmlUtil = {
         elseBlur.forEach(ele => {
             ele.style.filter = ""
         })
+    },
+
+    tutorial4BlurOn: () =>{
+        const backBlur = document.querySelectorAll(".mid > *:not(#tutorial-div)")
+        backBlur.forEach(ele => {
+            ele.style.filter = "blur(4px)"
+        })
+        const elseBlur = document.querySelectorAll(".main > *:not(.mid)")
+        elseBlur.forEach(ele => {
+            ele.style.filter = "blur(4px)"
+        })
+    },
+
+    tutorial4BlurOff: () => {
+        const backBlur = document.querySelectorAll(".mid > *:not(#tutorial-div)")
+        backBlur.forEach(ele => {
+            ele.style.filter = ""
+        })
+        const elseBlur = document.querySelectorAll(".main > *:not(.mid)")
+        elseBlur.forEach(ele => {
+            ele.style.filter = ""
+        })
     }
 
 

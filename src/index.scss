@@ -35,22 +35,82 @@ canvas{
     font-size: 30px;
 }
 
+#tutorial-4{
+    top: 26%;
+    left: 34%;
+    width: 700px;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+#tutorial-card-1{
+    float: left;
+    height: 400px;
+    width: auto;
+    padding: 5px;
+}
+
+#tutorial-5{
+    top: 26%;
+    left: 34%;
+    width: 700px;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+#tutorial-card-2{
+    float: left;
+    height: 400px;
+    width: auto;
+    padding: 5px;
+}
+
+#tutorial-6{
+    top: 26%;
+    left: 34%;
+    width: 700px;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+#tutorial-card-3{
+    float: left;
+    height: 400px;
+    width: auto;
+    padding: 5px;
+}
+
+#tutorial-7{
+    top: 26%;
+    left: 34%;
+    width: 700px;
+    flex-wrap: wrap;
+    font-size: 30px;
+}
+
+.make-slightly-bigger{
+    height: 30px;
+    width: auto;
+}
+
 .red{
     background-color: #4a5353;
     color: red;
-
 }
 
 .blue{
     background-color: #4a5353;
     color: rgb(64, 177, 218);
-
 }
 
 .brown{
     background-color: #4a5353;
-    color: rgb(147, 81, 11);
+    color: rgb(182, 105, 22);
+}
 
+.green{
+    background-color: #4a5353;
+    color: greenyellow;
 }
 
 .yellow{
@@ -278,4 +338,6 @@ header{
 img{
     background-color: #4a5353;
 }
+
+
 

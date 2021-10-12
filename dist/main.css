@@ -33,6 +33,64 @@ canvas {
   font-size: 30px;
 }
 
+#tutorial-4 {
+  top: 26%;
+  left: 34%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#tutorial-card-1 {
+  float: left;
+  height: 400px;
+  width: auto;
+  padding: 5px;
+}
+
+#tutorial-5 {
+  top: 26%;
+  left: 34%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#tutorial-card-2 {
+  float: left;
+  height: 400px;
+  width: auto;
+  padding: 5px;
+}
+
+#tutorial-6 {
+  top: 26%;
+  left: 34%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#tutorial-card-3 {
+  float: left;
+  height: 400px;
+  width: auto;
+  padding: 5px;
+}
+
+#tutorial-7 {
+  top: 26%;
+  left: 34%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+.make-slightly-bigger {
+  height: 30px;
+  width: auto;
+}
+
 .red {
   background-color: #4a5353;
   color: red;
@@ -45,7 +103,12 @@ canvas {
 
 .brown {
   background-color: #4a5353;
-  color: #93510b;
+  color: #b66916;
+}
+
+.green {
+  background-color: #4a5353;
+  color: greenyellow;
 }
 
 .yellow {
