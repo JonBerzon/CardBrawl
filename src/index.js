@@ -134,4 +134,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     })
 
+    const playGame = document.getElementById("intro-play-button")
+    playGame.addEventListener('click', ()=>{
+        const tutorial1 = document.getElementById("tutorial-1");
+        tutorial1.style.display = "none";
+        htmlUtil.tutorial1BlurOff();
+    })
+
 });

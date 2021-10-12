@@ -21,7 +21,7 @@ export class Game{
         this.player.deckHand.dealCards();
         this.board.renderCards();
         this.monster.showCurrentCard();
-        Tutorial.intro();
+        Tutorial.first();
 
         // console.log(this.deckHand.hand)
         // console.log(this.deckHand.deck)
