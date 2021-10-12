@@ -188,10 +188,11 @@
 
 #header {
   padding-top: 58px;
+  padding-bottom: 55px;
 }
 
 .title {
-  font-size: 65px;
+  font-size: 80px;
   color: #9c7c7c;
   background-color: inherit;
   letter-spacing: 0.1em;
