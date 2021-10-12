@@ -5,7 +5,7 @@ export class LandingPage{
         this.canvas = document.getElementById("startup-canvas");
         this.ctx = this.canvas.getContext('2d')
         this.canvas.width = 1920;
-        this.canvas.height = 750;
+        this.canvas.height = 650;
         this.dx = 100;
         this.dx1 = 1800
         this.demon1 = new Image();
