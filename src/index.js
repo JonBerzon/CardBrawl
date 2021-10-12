@@ -125,4 +125,13 @@ document.addEventListener("DOMContentLoaded", function () {
         htmlUtil.tutorial4BlurOff();
     })
 
+    const startButton = document.getElementById("start-button")
+    startButton.addEventListener('click', () =>{
+        const startup = document.getElementById("startup-div");
+        const main = document.getElementsByClassName("main")[0]
+        startup.style.display ="none"
+        main.style.display = ""
+
+    })
+
 });

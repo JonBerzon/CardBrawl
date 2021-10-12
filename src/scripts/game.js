@@ -2,6 +2,7 @@ import { DeckHand } from "./deckHand"
 import { Board } from "./board"
 import { Player } from "./player";
 import { Monster } from "./monster";
+import { Tutorial } from "./tutorial";
 
 export class Game{
     constructor(canvas, ctx){
@@ -20,6 +21,7 @@ export class Game{
         this.player.deckHand.dealCards();
         this.board.renderCards();
         this.monster.showCurrentCard();
+        Tutorial.intro();
 
         // console.log(this.deckHand.hand)
         // console.log(this.deckHand.deck)

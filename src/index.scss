@@ -2,6 +2,68 @@
 //     // position: relative;
 // }
 
+
+// .start-btn{ //https://codepen.io/DanielWeiner/pen/iFadn
+//     text-align: center;
+// 	display: inline-block;
+// 	margin:5px;
+//     font-weight: bold;
+//     padding: 10px 20px 10px 20px ;
+//     background-color: #9c7c7c;
+//     text-shadow: -1px -1px black, 1px 1px white;
+//     color: rgb(79, 79, 79);
+//     -webkit-border-radius: 7px;
+// 	-moz-border-radius: 7px;
+// 	-o-border-radius: 7px;
+// 	border-radius: 7px;
+//     box-shadow: 0 .2em rgb(48, 48, 48); 
+//     cursor: pointer;
+//     position: absolute;
+//     font-size: 60px;
+//     font-family: luminari;
+//     top: 240px
+
+// }
+
+#start-button {
+	color: #fff;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	transition: all 0.4s ease 0s;
+    position: absolute;
+    cursor: pointer;
+    font-size: 50px;
+    // font-family: luminari;
+    font-family: apple chancery;
+    box-shadow: 0 .4em rgb(57, 57, 57); 
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+
+    background: #9c7c7c;
+    color: #434343;
+    top: 230px;
+
+}
+
+#start-button:hover {
+    background: #434343;
+    color: #9c7c7c;
+	
+	letter-spacing: 1px;
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+	transition: all 0.4s ease 0s; 
+}
+
+#start-button:active {
+            transform: scale(0.98);
+            box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+        }
+
+
+
+
 #game-canvas{
     background-image: url(../src/img/board_nolight_withline.png);
     background-size: 100%;

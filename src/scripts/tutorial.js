@@ -54,6 +54,10 @@ const Tutorial = {
         tutorial6.style.display = "none";
         const tutorial7 = document.getElementById("tutorial-7");
         tutorial7.style.display = "";
+    },
+
+    intro: () =>{
+        
     }
 
 

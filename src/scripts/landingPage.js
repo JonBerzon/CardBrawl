@@ -45,8 +45,8 @@ export class LandingPage{
             this.ctx.drawImage(this.demon1, 0 + (j * 160), 0, 155, 130, this.dx1, 0, 480, 450)
 
             j += 1;
-            this.dx1 -= 25;
-        }, 90);
+            this.dx1 -= 20;
+        }, 70);
 
     }
 

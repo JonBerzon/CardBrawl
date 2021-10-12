@@ -1,6 +1,38 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
+#start-button {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.4s ease 0s;
+  position: absolute;
+  cursor: pointer;
+  font-size: 50px;
+  font-family: apple chancery;
+  box-shadow: 0 0.4em #393939;
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  background: #9c7c7c;
+  color: #434343;
+  top: 230px;
+}
+
+#start-button:hover {
+  background: #434343;
+  color: #9c7c7c;
+  letter-spacing: 1px;
+  box-shadow: 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+#start-button:active {
+  transform: scale(0.98);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}
+
 #game-canvas {
   background-image: url(../src/img/board_nolight_withline.png);
   background-size: 100%;
