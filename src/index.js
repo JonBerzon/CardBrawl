@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx = canvas.getContext('2d')
     canvas.onselectstart = function () { return false; }
 
-    canvas.width = 1237; 
-    canvas.height = 750; 
+    canvas.width = 1237; //resize
+    canvas.height = 750;
 
     let g = new Game(canvas,ctx)
     g.basicStartup();
