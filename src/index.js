@@ -12,7 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const ctx = canvas.getContext('2d')
     canvas.onselectstart = function () { return false; }
 
-    const test = .75
+    
+
+    const test = 1
     canvas.width = 1237 * test; //resize
     canvas.height = 750 * test;
 
@@ -132,11 +134,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const startButton = document.getElementById("start-button")
     startButton.addEventListener('click', () => {
         const startup = document.getElementById("startup-div");
-        const main = document.getElementsByClassName("main")[0]
+        const resolution = document.getElementById("resolution")
         startup.style.display = "none"
+        
+        
+        const main = document.getElementsByClassName("main")[0]
         main.style.display = ""
-
-
         hi.scaled();
         console.log(hi.arr)
         g.basicStartup();
