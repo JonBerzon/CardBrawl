@@ -20,6 +20,8 @@ export class LandingPage{
             if (this.dx >= 480){
                 clearInterval(intervalId);
                 this.animation2();
+                document.getElementById("start-button").style.display = "";
+
                 // this.animation3();
             }
             this.ctx.clearRect(this.dx, 150, 225, 225);
