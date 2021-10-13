@@ -8,6 +8,9 @@ const htmlUtil = {
         elseBlur.forEach(ele => {
             ele.style.filter = "blur(4px)"
         })
+        document.querySelector(".mid").style.position = "relative"
+
+
     },
 
     overlayBlurOff: ()=>{
@@ -19,6 +22,10 @@ const htmlUtil = {
         elseBlur.forEach(ele => {
             ele.style.filter = ""
         })
+        document.querySelector(".mid").style.position = "static"
+
+        
+
     },
 
     blurAll: ()=>{

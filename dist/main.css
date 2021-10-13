@@ -48,10 +48,14 @@
   justify-content: center;
 }
 
-.mid-overlay {
-  top: 35%;
-  left: 40%;
-  width: 500px;
+#resolution-div {
+  display: flex;
+  justify-content: center;
+}
+
+#resolution-pick {
+  width: 700px;
+  font-size: 30px;
 }
 
 #tutorial-1 {
@@ -120,6 +124,30 @@
 }
 
 #tutorial-7 {
+  top: 20%;
+  left: 20%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#mana-overlay {
+  top: 20%;
+  left: 20%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#game-won-overlay {
+  top: 20%;
+  left: 20%;
+  width: 700px;
+  flex-wrap: wrap;
+  font-size: 30px;
+}
+
+#game-lost-overlay {
   top: 20%;
   left: 20%;
   width: 700px;

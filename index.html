@@ -22,8 +22,28 @@
     </header>
     <div id="startup-div">
         <canvas id="startup-canvas"></canvas>
-        <span id='start-button'>START GAME</span>
+        <span id='start-button' style="display:none;">START GAME</span>
+    </div>
+    <div id="resolution-div" style="display: none;">
+        <h1 id="resolution-pick" class="overlay">
+            Before getting started, let's set your resolution. Pick the small res if you're working on a smaller laptop, around 11-14inches.
+            <br>
+            <button class="myButton" id="small-res-button"></buttonclass>small res</button>
+            <hr>
+            Pick the medium res if you're using on an average monitor, such as a 1080p monitor or a 15 inch or bigger laptop.
+            <br>
+            <button class="myButton" id="medium-res-button"></buttonclass>medium res</button>
+            <hr>
+            Pick the large res if you're using a 1440p display.
+            <br>
+            <button class="myButton" id="large-res-button"></buttonclass>large res</button>
+            <hr>
+            Pick the highest res if you're using a 4k monitor or ultrawide.
+            <br>
+            <button class="myButton" id="highest-res-button"></buttonclass>highest res</button>
 
+
+        </h1>
 
     </div>
     <div class="main" style="display: none;">

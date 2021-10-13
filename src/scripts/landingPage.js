@@ -40,6 +40,7 @@ export class LandingPage{
                 clearInterval(intervalId);
                 // this.animation2();
                 this.animation3();
+                document.getElementById("start-button").style.display = "";
             }
             this.ctx.clearRect(this.dx1, 0, 750, 750);
             this.ctx.drawImage(this.demon1, 0 + (j * 160), 0, 155, 130, this.dx1, 0, 360, 338)

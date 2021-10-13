@@ -38,8 +38,9 @@ export class Player {
             this.mana += mana
             this.greyMana();
             const manaOverlay = document.getElementById("mana-overlay")
-            htmlUtil.overlayBlurOn();
+            
             manaOverlay.style.display = "";
+            htmlUtil.overlayBlurOn();
         } else {
             this.greyMana();
             this.addShield(shield)

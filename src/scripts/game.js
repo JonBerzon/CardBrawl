@@ -5,11 +5,10 @@ import { Monster } from "./monster";
 import { Tutorial } from "./tutorial";
 
 export class Game {
-    constructor(canvas, ctx, scale, scaled) {
+    constructor(canvas, ctx, scale) {
         this.canvas = canvas;
         this.ctx = ctx;
         this.scale = scale
-        this.scaled = scaled
         this.board = new Board(this.canvas, this.ctx, this, this.scale);
         // this.deckHand = new DeckHand(this, this.board);
         this.player = new Player(this);
@@ -22,7 +21,7 @@ export class Game {
     basicStartup() {
         this.board.demonAnimation();
         this.player.deckHand.dealCards();
-        this.board.renderCards();
+        // this.board.renderCards();
         this.monster.showCurrentCard();
         Tutorial.first();
 
