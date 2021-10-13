@@ -3,8 +3,8 @@ import { Card } from "./card"
 import { htmlUtil } from "./htmlUtil";
 
 
-export class Monster{
-    constructor(game){
+export class Monster {
+    constructor(game) {
         this.hp = 20;
         this.shield = 0;
         this.game = game;
@@ -32,11 +32,11 @@ export class Monster{
         this.deckHand.deck.push(new Card("stronHeal", 0, 3, 2, this.deckHand, "src/img/boss_cards/shield1.png"));
     }
 
-    showCurrentCard(){
-        document.getElementById("monster-card-slot").src=`${this.deckHand.deck[0].src}`
+    showCurrentCard() {
+        document.getElementById("monster-card-slot").src = `${this.deckHand.deck[0].src}`
     }
 
-    takeDamage(num){
+    takeDamage(num) {
         let combinedHealth = this.shield + this.hp;
         combinedHealth -= num;
         if (this.hp >= combinedHealth) {
@@ -49,7 +49,7 @@ export class Monster{
         this.greyHealth();
     }
 
-    reset(){
+    reset() {
         this.hp = 20;
         this.nonGreyHealth();
         this.deckHand.shuffleDeck();
@@ -77,8 +77,8 @@ export class Monster{
         }
     }
 
-    monsterTurn(){
-        console.log(this)
+    monsterTurn() {
+        // console.log(this)
         this.monsterAttack();
         this.monsterHeal();
         this.deckHand.shuffleDeck();
@@ -86,7 +86,7 @@ export class Monster{
         //NEEDS TO BE WRITTEN
     }
 
-    monsterHeal(){
+    monsterHeal() {
         let heal = this.deckHand.deck[0].def;
         // debugger
         this.hp += heal;
@@ -95,12 +95,12 @@ export class Monster{
         this.greyHealth();
     }
 
-    monsterAttack(){
+    monsterAttack() {
         let dmg = this.deckHand.deck[0].atk;
         this.game.player.takeDamage(dmg);
     }
 
-    isAlive(){
+    isAlive() {
         if (this.hp <= 0) {
             htmlUtil.overlayBlurOn();
             document.getElementById("game-won-overlay").style.display = "";

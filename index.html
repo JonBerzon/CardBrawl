@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,21 +11,22 @@
     <title>Card Brawl</title>
     <link rel="icon" href="./src/img/non_canvas/boss-sprite.png">
 </head>
+
 <body>
     <header id="header">
         <nav>
             <ul class="nav-ul">
-                <h1 class="title">Card Brawl</h1>   
+                <h1 class="title">Card Brawl</h1>
             </ul>
         </nav>
-    </header >
-    <div id="startup-div" >
+    </header>
+    <div id="startup-div">
         <canvas id="startup-canvas"></canvas>
         <span id='start-button'>START GAME</span>
 
-        
+
     </div>
-    <div class="main"style="display: none;">
+    <div class="main" style="display: none;">
         <div class="left">
             <img src="./src/img/non_canvas/Player sprite.png" id="player-sprite" alt="">
             <hr>
@@ -41,7 +43,7 @@
                 <img src="./src/img/non_canvas/heart.png" id="player-heart-9">
                 <img src="./src/img/non_canvas/heart.png" id="player-heart-10">
             </div>
-            
+
             <hr>
             <p id="health-mana"> Mana</p>
             <div class="icons">
@@ -62,30 +64,36 @@
             <div class="left-buttons">
                 <button class="myButton" id="reset-button">Reset</button>
                 <button class="myButton" id="tutorial-button">Tutorial</button>
-            </div>  
+            </div>
             <hr>
-            <div class="links" id="links-div">
-                <a href="https://www.linkedin.com/in/jonathanberzon/" class="links" target="_blank"><img class="links" src="./src/img/social_icons/linkedin.png"></a>
-                <a href="https://github.com/JonBerzon" class="links" target="_blank"><img class="links" src="./src/img/social_icons/github.png"></a>
-                <a href="mailto:joanthanlberzon@gmail.com" class="links"><img class="links" src="./src/img/social_icons/gmail.png"></a>
+            <div class="links-div" id="links-div">
+                <a href="https://www.linkedin.com/in/jonathanberzon/" class="links" target="_blank"><img class="links"
+                        src="./src/img/social_icons/linkedin.png"></a>
+                <a href="https://github.com/JonBerzon" class="links" target="_blank"><img class="links"
+                        src="./src/img/social_icons/github.png"></a>
+                <a href="mailto:joanthanlberzon@gmail.com" class="links"><img class="links"
+                        src="./src/img/social_icons/gmail.png"></a>
                 <a href="#" class="links"><img class="links" src="./src/img/social_icons/website.png"></a>
             </div>
         </div>
-    
+
         <div class="mid">
             <div class="canvas-div">
                 <canvas id="game-canvas"></canvas>
             </div>
             <div id="overlay-div">
-                <h1 id="mana-overlay" class="overlay mid-overlay" style="display:none">You used too much mana. Either end your turn or pick a different card.
+                <h1 id="mana-overlay" class="overlay mid-overlay" style="display:none">You used too much mana. Either
+                    end your turn or pick a different card.
                     <br>
-                    <button class="myButton" id="oom-button" >Continue</button>
+                    <button class="myButton" id="oom-button">Continue</button>
                 </h1>
-                <h1 id="game-won-overlay" class="overlay mid-overlay" style="display:none">You defeated Alvin! Feel free to play again or check out my links!
+                <h1 id="game-won-overlay" class="overlay mid-overlay" style="display:none">You defeated Alvin! Feel free
+                    to play again or check out my links!
                     <br>
                     <button class="myButton" id="play-again-button">Play Again</button>
                 </h1>
-                <h1 id="game-lost-overlay" class="overlay mid-overlay" style="display:none">You lost to Alvin! Feel free to play again or check out
+                <h1 id="game-lost-overlay" class="overlay mid-overlay" style="display:none">You lost to Alvin! Feel free
+                    to play again or check out
                     my links!
                     <br>
                     <button class="myButton" id="play-again-button1">Play Again</button>
@@ -93,36 +101,66 @@
             </div>
             <div id="tutorial-div">
                 <h1 id="tutorial-1" class="overlay" style="display:none">
-                    Welcome to Card Brawl, a fun interactive card game where you get to battle Alvin, the blue floating demon guy over there.
+                    Welcome to Card Brawl, a fun interactive card game where you get to battle Alvin, the blue floating
+                    demon guy over there.
                     <br>
                     <button class="myButton" id="tutorial-button-1"></buttonclass>Tutorial</button>
                     <button class="myButton" id="intro-play-button"></buttonclass>Play Game</button>
                 </h1>
                 <h1 id="tutorial-2" class="overlay" style="display:none">
-                    To the left here, we can see you, the handsome little knight at the top. <hr> Under your icon, we can see your <span class="red">health</span>  <img class="make-slightly-bigger" src="./src/img/non_canvas/heart.png">, <span class="blue">mana</span> <img class="make-slightly-bigger" src="./src/img/non_canvas/mana.png">,and <span class="brown">shields</span> <img src="./src/img/non_canvas/shield.png">. When your <span class="red">health</span> reaches 0, you lose. Try not to let that happen. <hr>You can use shield cards to gain <span class="brown">shields</span> which deflect incoming damage from Alvin. <hr>You also have 3 <span class="blue">mana</span>, listed below your <span class="red">health</span>. Each card has a <span class="blue">mana</span> cost. Use your <span class="blue">mana</span> wisely to combine cards for the best outcome.
+                    To the left here, we can see you, the handsome little knight at the top.
+                    <hr> Under your icon, we can see your <span class="red">health</span> <img
+                        class="make-slightly-bigger" src="./src/img/non_canvas/heart.png">, <span
+                        class="blue">mana</span> <img class="make-slightly-bigger"
+                        src="./src/img/non_canvas/mana.png">,and <span class="brown">shields</span> <img
+                        src="./src/img/non_canvas/shield.png">. When your <span class="red">health</span> reaches 0, you
+                    lose. Try not to let that happen.
+                    <hr>You can use shield cards to gain <span class="brown">shields</span> which deflect incoming
+                    damage from Alvin.
+                    <hr>You also have 3 <span class="blue">mana</span>, listed below your <span
+                        class="red">health</span>. Each card has a <span class="blue">mana</span> cost. Use your <span
+                        class="blue">mana</span> wisely to combine cards for the best outcome.
                     <br>
                     <button class="myButton" id="tutorial-button-2"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-3" class="overlay" style="display:none">
-                    To the right here we see Alvin at the top, his <span class="red">health</span> right below him, and finally the card he's about to play (cards will be explained in the next section). <hr>At the bottom, we can see the <span class="yellow">Play Cards</span> and <span class="yellow">End Turn</span> button.<hr> <span class="yellow">Play Cards</span> will play the card you've selected by clicking on it and highlighting it yellow. You can only select one card at a time. <hr> <span class="yellow">End Turn</span> will complete your turn, and give Alvin a chance to fight back with his selected card.
+                    To the right here we see Alvin at the top, his <span class="red">health</span> right below him, and
+                    finally the card he's about to play (cards will be explained in the next section).
+                    <hr>At the bottom, we can see the <span class="yellow">Play Cards</span> and <span
+                        class="yellow">End Turn</span> button.
+                    <hr> <span class="yellow">Play Cards</span> will play the card you've selected by clicking on it and
+                    highlighting it yellow. You can only select one card at a time.
+                    <hr> <span class="yellow">End Turn</span> will complete your turn, and give Alvin a chance to fight
+                    back with his selected card.
                     <br>
                     <button class="myButton" id="tutorial-button-3"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-4" class="overlay" style="display:none">
                     <img id="tutorial-card-1" src="./src/img/cards/weaka.png">
-                    This is an <span class="red">attack</span> card. The card text describes the action you will take by placing that card. In this instance you would deal one damage to Alvin.<hr> In the top left corner you'll notice a blue potion <img class="make-slightly-bigger" src="./src/img/non_canvas/mana.png" >. This is the <span class="blue">mana</span> cost of your card. As mentioned before you only have 3 mana per turn, so pay close attention to the mana you use.
+                    This is an <span class="red">attack</span> card. The card text describes the action you will take by
+                    placing that card. In this instance you would deal one damage to Alvin.
+                    <hr> In the top left corner you'll notice a blue potion <img class="make-slightly-bigger"
+                        src="./src/img/non_canvas/mana.png">. This is the <span class="blue">mana</span> cost of your
+                    card. As mentioned before you only have 3 mana per turn, so pay close attention to the mana you use.
                     <br>
                     <button class="myButton" id="tutorial-button-4"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-5" class="overlay" style="display:none">
                     <img id="tutorial-card-2" src="./src/img/cards/weakd.png">
-                    This is a <span class="brown">shield</span> card. Just as with attack cards, the card text will indicate the action you will take. Shield cards block incoming damage from Alvins attacks. You can see your current shields over to the left when you see this icon lit up <img src="./src/img/non_canvas/shield.png" alt="">. You will not survive without these, so be sure to protect yourself!
+                    This is a <span class="brown">shield</span> card. Just as with attack cards, the card text will
+                    indicate the action you will take. Shield cards block incoming damage from Alvins attacks. You can
+                    see your current shields over to the left when you see this icon lit up <img
+                        src="./src/img/non_canvas/shield.png" alt="">. You will not survive without these, so be sure to
+                    protect yourself!
                     <br>
                     <button class="myButton" id="tutorial-button-5"></buttonclass>Continue</button>
                 </h1>
                 <h1 id="tutorial-6" class="overlay" style="display:none">
                     <img id="tutorial-card-3" src="./src/img/boss_cards/atk1.png">
-                    Lastly, let's take a look at Alvin's cards. They follow the same structure as yours, except he doesn't use mana and he can only play one card at a time. As you can see on the card to the left, Alvin's special mechanic is that he can <span class="green">heal</span> himself. Don't expect Alvin to go down without a fight.
+                    Lastly, let's take a look at Alvin's cards. They follow the same structure as yours, except he
+                    doesn't use mana and he can only play one card at a time. As you can see on the card to the left,
+                    Alvin's special mechanic is that he can <span class="green">heal</span> himself. Don't expect Alvin
+                    to go down without a fight.
                     <br>
                     <button class="myButton" id="tutorial-button-6"></buttonclass>Continue</button>
                 </h1>
@@ -131,13 +169,13 @@
                     <br>
                     <button class="myButton" id="tutorial-button-7"></buttonclass>Lets Play!</button>
                 </h1>
-                
+
 
             </div>
         </div>
-    
+
         <div class="right">
-            
+
 
             <img src="./src/img/non_canvas/boss-sprite.png" id="player-sprite" alt="">
             <hr>
@@ -165,23 +203,24 @@
                 <img src="./src/img/non_canvas/heart.png" id="monster-heart-20">
             </div>
             <hr>
-            
+
             <img src="./src/img/cards/cback.png" id="monster-card-slot">
 
             <hr>
-            
-            
+
+
             <div class="right-buttons">
                 <button class="myButton" id="play-cards-button">Play Cards</button>
                 <button class="myButton" id="end-turn-button">End Turn</button>
 
                 <!-- <a href="#" class="myButton" id="play-cards">Play Cards</a> -->
             </div>
-            
+
         </div>
     </div>
-    
 
-    
+
+
 </body>
+
 </html>

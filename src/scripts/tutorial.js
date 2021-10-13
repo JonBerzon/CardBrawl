@@ -1,13 +1,13 @@
 import { htmlUtil } from "./htmlUtil"
 
 const Tutorial = {
-    first: ()=>{
+    first: () => {
         const tutorial1 = document.getElementById("tutorial-1");
         tutorial1.style.display = "";
         htmlUtil.tutorial1BlurOn();
     },
 
-    second: ()=>{
+    second: () => {
         const tutorial1 = document.getElementById("tutorial-1");
         tutorial1.style.display = "none";
         htmlUtil.tutorial1BlurOff();
@@ -16,7 +16,7 @@ const Tutorial = {
         htmlUtil.tutorial2BlurOn();
     },
 
-    third: ()=>{
+    third: () => {
         const tutorial2 = document.getElementById("tutorial-2");
         tutorial2.style.display = "none";
         htmlUtil.tutorial2BlurOff();
@@ -25,7 +25,7 @@ const Tutorial = {
         htmlUtil.tutorial3BlurOn();
     },
 
-    fourth: ()=>{
+    fourth: () => {
         const tutorial3 = document.getElementById("tutorial-3");
         tutorial3.style.display = "none";
         htmlUtil.tutorial3BlurOff();
@@ -34,14 +34,14 @@ const Tutorial = {
         htmlUtil.tutorial4BlurOn();
     },
 
-    fifth: ()=>{
+    fifth: () => {
         const tutorial4 = document.getElementById("tutorial-4");
         tutorial4.style.display = "none";
         const tutorial5 = document.getElementById("tutorial-5");
         tutorial5.style.display = "";
     },
 
-    sixth: ()=>{
+    sixth: () => {
         const tutorial5 = document.getElementById("tutorial-5");
         tutorial5.style.display = "none";
         const tutorial6 = document.getElementById("tutorial-6");
@@ -56,11 +56,11 @@ const Tutorial = {
         tutorial7.style.display = "";
     },
 
-    intro: () =>{
-        
+    intro: () => {
+
     }
 
 
 }
 
-export {Tutorial}
+export { Tutorial }

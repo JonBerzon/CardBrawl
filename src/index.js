@@ -5,71 +5,75 @@ import { Game } from "./scripts/game";
 import { htmlUtil } from "./scripts/htmlUtil";
 import { Tutorial } from "./scripts/tutorial";
 import { LandingPage } from "./scripts/landingPage";
+import { Scale } from "./scripts/scale";
 
 document.addEventListener("DOMContentLoaded", function () {
     const canvas = document.getElementById("game-canvas");
     const ctx = canvas.getContext('2d')
     canvas.onselectstart = function () { return false; }
 
-    canvas.width = 1237; 
-    canvas.height = 750; 
+    const test = .75
+    canvas.width = 1237 * test; //resize
+    canvas.height = 750 * test;
 
-    let g = new Game(canvas,ctx)
-    g.basicStartup();
+    let hi = new Scale(test);
+    let g = new Game(canvas, ctx, test, hi)
+
 
     let lp = new LandingPage();
     lp.startup();
     lp.startup1();
 
     let cardSlots = [];
-    let left = 290;
+    let left = 290 * hi.scale;
     for (let i = 0; i < 5; i++) {
-        let width = 160;
-        let height = 200;
-        let top = 440;
+        let width = 160 * hi.scale;
+        let height = 200 * hi.scale;
+        let top = 440 * hi.scale;
         let ele = [width, height, top, left];
         cardSlots.push(ele);
-        left += 180;    
+        left += 180 * hi.scale;
     }
-    
-    canvas.addEventListener('click', function(event){
+
+    canvas.addEventListener('click', function (event) {
         let x = event.pageX - canvas.offsetLeft;
-        let y = event.pageY - canvas.offsetTop;  
-        console.log(x,y);
-        cardSlots.forEach(function (ele, index){
+        let y = event.pageY - canvas.offsetTop;
+        console.log(x, y);
+        cardSlots.forEach(function (ele, index) {
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
                 if (!g.noLoadPos.includes(index)) g.player.deckHand.hand[index].select();
-                
+
             }
         });
-        
     });
 
+
+
     const playCardsButton = document.getElementById("play-cards-button");
-    playCardsButton.addEventListener('click', ()=>{
+    playCardsButton.addEventListener('click', () => {
         g.sendSelected();
     });
 
     const resetButton = document.getElementById("reset-button")
-    resetButton.addEventListener('click', ()=>{
+    resetButton.addEventListener('click', () => {
         g.fullReset();
     });
 
     const endTurnButton = document.getElementById("end-turn-button")
-    endTurnButton.addEventListener('click', ()=>{
+    endTurnButton.addEventListener('click', () => {
         g.endTurn();
     });
 
     const oomButton = document.getElementById("oom-button")
     const manaOverlay = document.getElementById("mana-overlay")
-    oomButton.addEventListener('click', ()=>{
-        manaOverlay.style.display="none";
+    oomButton.addEventListener('click', () => {
+        manaOverlay.style.display = "none";
         htmlUtil.overlayBlurOff();
     });
 
     const playAgainButton = document.getElementById("play-again-button")
     const gameWonOverlay = document.getElementById("game-won-overlay")
-    playAgainButton.addEventListener('click', ()=>{
+    playAgainButton.addEventListener('click', () => {
         gameWonOverlay.style.display = "none";
         g.fullReset();
         htmlUtil.overlayBlurOff();
@@ -84,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const tutorialButton = document.getElementById("tutorial-button")
-    tutorialButton.addEventListener('click', ()=>{
+    tutorialButton.addEventListener('click', () => {
         Tutorial.first();
     });
 
@@ -99,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     const tutorialButton3 = document.getElementById("tutorial-button-3")
-    tutorialButton3.addEventListener('click', () =>{
+    tutorialButton3.addEventListener('click', () => {
         Tutorial.fourth();
     })
 
@@ -126,19 +130,28 @@ document.addEventListener("DOMContentLoaded", function () {
     })
 
     const startButton = document.getElementById("start-button")
-    startButton.addEventListener('click', () =>{
+    startButton.addEventListener('click', () => {
         const startup = document.getElementById("startup-div");
         const main = document.getElementsByClassName("main")[0]
-        startup.style.display ="none"
+        startup.style.display = "none"
         main.style.display = ""
+
+
+        hi.scaled();
+        console.log(hi.arr)
+        g.basicStartup();
 
     })
 
     const playGame = document.getElementById("intro-play-button")
-    playGame.addEventListener('click', ()=>{
+    playGame.addEventListener('click', () => {
         const tutorial1 = document.getElementById("tutorial-1");
         tutorial1.style.display = "none";
         htmlUtil.tutorial1BlurOff();
+
+
+
+
     })
 
 });

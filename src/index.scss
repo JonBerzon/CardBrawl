@@ -25,6 +25,10 @@
 
 // }
 
+// html{
+//     zoom: 80%;
+// }
+
 #start-button {
 	color: #fff;
 	text-transform: uppercase;
@@ -258,8 +262,9 @@
 a{
     text-decoration: none;
     color: rgb(116, 116, 71);
-    padding-right: 80px;
-    padding-left: 90px;
+    // margin: auto;
+    
+    
 }
 
 
@@ -277,9 +282,16 @@ a{
     background-color: #4a5353;
     width: 225px;
     height: 688px;
-
-
 }
+// .right{
+//     // display: flex;
+//     border: 5px solid rgb(211,211,211,.315);
+//     border-radius: 10px;
+//     background-color: #4a5353;
+//     width: 12%;
+//     height: 63.7%;
+//     justify-content: center;
+// }
 .right{
     // display: flex;
     border: 5px solid rgb(211,211,211,.315);
@@ -390,11 +402,18 @@ header{
 
 .links{
 	background-color: #4a5353;
+    padding-right: 25px;
+    padding-left: 25px;
+    
 
 }
 
 #links-div{
     margin-top: 18px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
 }
 
 

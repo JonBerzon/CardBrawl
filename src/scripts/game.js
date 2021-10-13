@@ -4,19 +4,22 @@ import { Player } from "./player";
 import { Monster } from "./monster";
 import { Tutorial } from "./tutorial";
 
-export class Game{
-    constructor(canvas, ctx){
+export class Game {
+    constructor(canvas, ctx, scale, scaled) {
         this.canvas = canvas;
         this.ctx = ctx;
-        this.board = new Board(this.canvas, this.ctx, this);
+        this.scale = scale
+        this.scaled = scaled
+        this.board = new Board(this.canvas, this.ctx, this, this.scale);
         // this.deckHand = new DeckHand(this, this.board);
         this.player = new Player(this);
         this.monster = new Monster(this);
         this.cardClear = [];
         this.noLoadPos = [];
+
     }
 
-    basicStartup(){
+    basicStartup() {
         this.board.demonAnimation();
         this.player.deckHand.dealCards();
         this.board.renderCards();
@@ -42,43 +45,43 @@ export class Game{
         this.player.deckHand.deselect();
     }
 
-    fullReset(){
+    fullReset() {
         this.resetRemoveCard();
         this.player.reset();
-        this.monster.reset(); 
-        
+        this.monster.reset();
+
     }
 
-    removeCard(){
+    removeCard() {
         let pos = null;
-        this.player.deckHand.hand.forEach(card=>{
+        this.player.deckHand.hand.forEach(card => {
             if (card.isSelected) pos = card.pos
         })
-        if (pos !== null){
-            this.cardClear.push(()=>this.ctx.clearRect(290 + (pos * 180), 440, 174, 218))
+        if (pos !== null) {
+            this.cardClear.push(() => this.ctx.clearRect(290 * this.scale + (pos * (180 * this.scale)), 440 * this.scale, 174 * this.scale, 218 * this.scale))
             this.noLoadPos.push(pos);
         }
         this.remove();
-        
+
     }
-    remove(){
+    remove() {
         for (let i = 0; i < this.cardClear.length; i++) {
             this.cardClear[i]();
         }
     }
 
-    resetRemoveCard(){
+    resetRemoveCard() {
         this.cardClear = [];
         this.noLoadPos = [];
     }
 
-    endTurn(){
+    endTurn() {
         this.resetRemoveCard();
         this.monster.monsterTurn();//NEEDS TO BE WRITTEN
         this.player.endReset();
-        
 
 
-        
+
+
     }
 }
