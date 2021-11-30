@@ -12,8 +12,6 @@ export class Board {
         this.demonIdle.src = "./src/img/animation/1.png"
         this.renderedCards = [];
         this.cardImg();
-
-        console.log(this.renderedCards)
     }
 
     cardImg() {

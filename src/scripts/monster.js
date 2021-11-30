@@ -78,17 +78,14 @@ export class Monster {
     }
 
     monsterTurn() {
-        // console.log(this)
         this.monsterAttack();
         this.monsterHeal();
         this.deckHand.shuffleDeck();
         this.showCurrentCard();
-        //NEEDS TO BE WRITTEN
     }
 
     monsterHeal() {
         let heal = this.deckHand.deck[0].def;
-        // debugger
         this.hp += heal;
         if (this.hp > 20) this.hp = 20;
         this.nonGreyHealth();

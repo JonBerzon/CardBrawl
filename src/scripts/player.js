@@ -13,8 +13,6 @@ export class Player {
         this.cardArr = this.game.board.renderedCards;
         this.populateDeck();
         this.deckHand.shuffleDeck();
-        // console.log(this.cardArr)
-
     }
 
     populateDeck() {

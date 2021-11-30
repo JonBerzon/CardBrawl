@@ -24,9 +24,6 @@ export class Game {
         // this.board.renderCards();
         this.monster.showCurrentCard();
         Tutorial.first();
-
-        // console.log(this.deckHand.hand)
-        // console.log(this.deckHand.deck)
     }
 
     sendSelected() {

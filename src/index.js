@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let x = event.pageX - canvas.offsetLeft;
         let y = event.pageY - canvas.offsetTop;
         
-        console.log(x, y);
+        // console.log(x, y) THIS IS HERE FOR COORDINATE TESTING
         cardSlots.forEach(function (ele, index) {
             if (y > ele[2] && y < ele[2] + ele[1] && x > ele[3] && x < ele[3] + ele[0]) {
                 if (!g.noLoadPos.includes(index)) g.player.deckHand.hand[index].select();
