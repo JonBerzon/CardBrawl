@@ -31,6 +31,8 @@ const Tutorial = {
 }
 ```
 
+<img src="src/img/readme/Tutorial-cardbrawl.gif">
+
 
 ## Game Logic
 Card Brawls game logic followed Object Oriented Principals. Classes were created for the Board, Card, Deck, Game, Monsters, and Players. Classes were created with scalability in mind, making it possible to add new bosses, decks, and cards if expansion is desired. 
@@ -70,6 +72,8 @@ takeDamage(damage) {
    this.greyHealth();
 }
 ```
+
+<img src="src/img/readme/game-mechanics-cardbrawl.gif">
 
 
 <!-- # Functionality & MVPs: 
